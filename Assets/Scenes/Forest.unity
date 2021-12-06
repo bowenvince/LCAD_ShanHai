@@ -317,6 +317,37 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a1c057e6875ee34f989aff8a11a3fa6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &203209792
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 203209793}
+  m_Layer: 0
+  m_Name: Monster
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &203209793
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 203209792}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -2.8157475, y: -0.5853943, z: -3.5126953}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 621336237}
+  m_Father: {fileID: 0}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &246783251
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -932,6 +963,7 @@ GameObject:
   - component: {fileID: 621336237}
   - component: {fileID: 621336236}
   - component: {fileID: 621336235}
+  - component: {fileID: 621336238}
   m_Layer: 0
   m_Name: Zheng
   m_TagString: Untagged
@@ -956,7 +988,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 28.8, y: 16.199999}
+    oldSize: {x: 18, y: 8.29}
     newSize: {x: 28.8, y: 16.199999}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -1004,9 +1036,9 @@ SpriteRenderer:
   m_SortingLayerID: 1858649657
   m_SortingLayer: 2
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 7447c0fb4f02a494888b068f373b7182, type: 3}
+  m_Sprite: {fileID: 21300000, guid: a6921e973c994fa4d956898b31c28832, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 1
+  m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
   m_Size: {x: 28.8, y: 16.199999}
@@ -1022,13 +1054,32 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 621336234}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.76, y: -1.99, z: -3.3411343}
-  m_LocalScale: {x: 0.3432, y: 0.3432, z: 0.3432}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.6042526, y: -1.0046058, z: 0.171561}
+  m_LocalScale: {x: 0.56725043, y: 0.56725043, z: 0.56725043}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_Father: {fileID: 203209793}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &621336238
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 621336234}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 95ba38bf2ffddd9459623b63079d2604, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!224 &720074892 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 2068094457394559234, guid: 238d3992b0d23b9448ff69ee4e64e3e3,

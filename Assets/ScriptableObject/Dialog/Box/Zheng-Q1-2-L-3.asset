@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f376db7e18d57bb4aabefd13e2f1221e, type: 3}
+  m_Name: Zheng-Q1-2-L-3
+  m_EditorClassIdentifier: 
+  m_character: {fileID: 11400000, guid: cb460bfd4a348744cad31d9b10136684, type: 2}
+  m_text: Umm...I heard there is a monster hurting people, and your friend saw a
+    monster? Do you know anything about that?

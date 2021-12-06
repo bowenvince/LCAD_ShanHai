@@ -2,13 +2,15 @@
 using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
+using UnityEngine.UI;
 using TMPro;
 
 public class InteractionScript : MonoBehaviour
 {
     public bool CanInteract = false;
     public GameObject Interact_Guide_canvas;
-    public GameObject Dialog_canvas;
+    public GameObject DialogChat_canvas;
+    public GameObject DialogBox_canvas;
 
     private Collider2D current_target;
 
@@ -17,6 +19,11 @@ public class InteractionScript : MonoBehaviour
 
     public float Auto_Dialog_Delay = 0f;
     public bool Auto_Dialog = true;
+
+    //for DialogBox
+    private bool DialogBox_started = false;
+    private DialogNode current_node;
+
 
     private void OnTriggerEnter2D(Collider2D other)
     {
@@ -30,7 +37,7 @@ public class InteractionScript : MonoBehaviour
             if (other.TryGetComponent(out DialogSystem get_dialogSys)) 
             {
                 current_dialogSys = get_dialogSys;
-                StartCoroutine(WaitAndShowDialog(Auto_Dialog_Delay));
+                StartCoroutine(WaitAndShowDialogChat(Auto_Dialog_Delay));
             }
         }
     }
@@ -52,7 +59,7 @@ public class InteractionScript : MonoBehaviour
         Interact_Guide_canvas.GetComponent<CanvasGroup>().DOFade(0, 1f);
         if (other.tag == "NPC") 
         {
-            HideDialog();
+            HideDialogChat();
         }
         
     }
@@ -64,6 +71,10 @@ public class InteractionScript : MonoBehaviour
         {
             Interact_Guide_canvas.transform.localScale = new Vector3(Interact_Guide_canvas.transform.localScale.x * -1f, Interact_Guide_canvas.transform.localScale.y, Interact_Guide_canvas.transform.localScale.z);
         }
+        if (Input.GetKey(KeyCode.E) && CanInteract && current_dialogSys) 
+        {
+            ShowDialogBox();
+        }
     }
 
     private void Awake()
@@ -71,63 +82,166 @@ public class InteractionScript : MonoBehaviour
         //interact guide setup
         Interact_Guide_canvas.GetComponent<CanvasGroup>().alpha = 0;
         //dialog canvas setup
-        Dialog_canvas.SetActive(false);
-        Dialog_canvas.GetComponent<CanvasGroup>().alpha = 0;
+        DialogChat_canvas.SetActive(false);
+        DialogChat_canvas.GetComponent<CanvasGroup>().alpha = 0;
+        DialogBox_canvas.SetActive(false);
+        DialogBox_canvas.GetComponent<CanvasGroup>().alpha = 0;
     }
 
-    public void ShowDialog() 
+    //auto dialog for chat
+    public void ShowDialogChat() 
     {
-        if ((Input.GetKeyDown(KeyCode.E) || Auto_Dialog) && CanInteract)
+        if (Auto_Dialog && CanInteract)
         {
             Debug.Log("Talking to ; ");
             //show dialog canvas + fade-in
             if (current_target)
             {
-                Dialog_canvas.SetActive(true);
-                Dialog_canvas.transform.position = current_target.transform.position + new Vector3(0, 1f, 0);
-                Dialog_canvas.GetComponent<CanvasGroup>().alpha = 0;
-                Dialog_canvas.GetComponent<CanvasGroup>().DOFade(0.8f, 0.5f);
+                DialogChat_canvas.SetActive(true);
+                DialogChat_canvas.transform.position = current_target.transform.position + new Vector3(0, 1f, 0);
+                DialogChat_canvas.GetComponent<CanvasGroup>().alpha = 0;
+                DialogChat_canvas.GetComponent<CanvasGroup>().DOFade(0.8f, 0.5f);
                 //interact guide fade-out
                 Interact_Guide_canvas.GetComponent<CanvasGroup>().DOFade(0, 1f);
                 //update text if possible
                 if (current_dialogSys)
                 {
-                    if (current_dialogSys.Get_Current_Dialog() != null)
+                    if (current_dialogSys.Get_Current_Dialog_Chat() != null)
                     {
-                        DialogSO current_dialog = current_dialogSys.Get_Current_Dialog();
-                        Dialog_canvas.GetComponentInChildren<TextMeshProUGUI>().text = current_dialog.text;
+                        DialogChatSO current_dialog = current_dialogSys.Get_Current_Dialog_Chat();
+                        DialogChat_canvas.GetComponentInChildren<TextMeshProUGUI>().text = current_dialog.text;
                         current_dialog.Process_Solution();
 
                     }
                     else
                     {
-                        Dialog_canvas.GetComponentInChildren<TextMeshProUGUI>().text = "Holder";
+                        DialogChat_canvas.GetComponentInChildren<TextMeshProUGUI>().text = "Holder";
                     }
                 }
                 else
                 {
-                    Dialog_canvas.GetComponentInChildren<TextMeshProUGUI>().text = "Holder";
+                    DialogChat_canvas.GetComponentInChildren<TextMeshProUGUI>().text = "Holder";
                 }
             }
         }
     }
 
-    public void HideDialog() 
+    //button triggered dialog box
+    public void ShowDialogBox()
     {
-        //disable dialog canvas
-        if (Dialog_canvas.activeSelf)
+        if (CanInteract)
         {
-            Dialog_canvas.SetActive(false);
-            current_dialogSys = null;
+            Debug.Log("Talking to ; ");
+            //show dialog canvas + fade-in
+            if (current_target)
+            {
+                //update text if possible
+                if (current_dialogSys)
+                {
+                    DialogBoxSO current_dialog = current_dialogSys.Get_Current_Dialog_Box();
+                    Debug.Log("current_dialog = " + current_dialog);
+
+                    if (current_dialog != null)
+                    {
+                        //interact guide fade-out
+                        Interact_Guide_canvas.GetComponent<CanvasGroup>().DOFade(0, 1f);
+                        //close any chat if open
+                        if (DialogChat_canvas.activeSelf) HideDialogChat();
+
+                        DialogBox_canvas.GetComponent<CanvasGroup>().alpha = 0;
+                        DialogBox_canvas.SetActive(true);
+                        DialogBox_canvas.GetComponent<CanvasGroup>().DOFade(1f, 0.5f);
+
+                        DialogBox_started = true;
+                        //disable playermovement
+                        GetComponent<PlayerMovement>().enabled = false;
+                        current_node = current_dialog.first_node;
+                        if (!current_node) return;
+                        UpdateDialogBox();
+                    }
+                    else
+                    {
+                        //if no current_dialog (no condition matched), nothing happen
+                    }
+                }
+                else
+                {
+                    //if no current_dialogSys (DialogSystem is not attached), nothing happen
+                }
+            }
         }
     }
 
-    private IEnumerator WaitAndShowDialog(float waitTime)
+    public void UpdateDialogBox() 
+    {
+        //check typing animation end?
+        if (TextTyper._this.is_typing)
+        {
+            TextTyper._this.SkipEffect();
+        }
+        else 
+        {
+            //if no current node => reached end of dialog
+            if (!current_node)
+            {
+                //call end of dialog
+                EndDialogBox();
+                return;
+            }
+            //update sprite
+            if (current_node)
+                DialogBox_canvas.GetComponentInChildren<Image>().sprite = current_node.NarrationLine_current.Character.Sprite;
+            //update name
+
+            string named_text = current_node.NarrationLine_current.Character.Name +": "+ current_node.NarrationLine_current.Text;
+            TextTyper._this.DisplayText_EffectTypeWriter(named_text);
+            if (current_node.GetType() == typeof(DialogBasicNode))
+            {
+                //go to next node
+                current_node = current_node.Next_node();
+            }
+            else if (current_node.GetType() == typeof(DialogChoiceNode)) 
+            {
+                //show options
+            }
+        }
+    }
+
+    //end of dialogBox, process solution and hide dialog box panel
+    public void EndDialogBox() 
+    {
+        DialogBoxSO current_dialog = current_dialogSys.Get_Current_Dialog_Box();
+        current_dialog.Process_Solution();
+        DialogBox_started = false;
+        HideDialogBox();
+        //re-enable playermovement
+        GetComponent<PlayerMovement>().enabled = true;
+    }
+
+    public void HideDialogChat() 
+    {
+        //disable dialog canvas
+        if (DialogChat_canvas.activeSelf)
+        {
+            DialogChat_canvas.SetActive(false);
+        }
+    }
+
+    public void HideDialogBox()
+    {
+        //disable dialog canvas
+        if (DialogBox_canvas.activeSelf)
+        {
+            DialogBox_canvas.SetActive(false);
+        }
+    }
+
+    private IEnumerator WaitAndShowDialogChat(float waitTime)
     {
         yield return new WaitForSeconds(waitTime);
         if (CanInteract) 
         {
-            ShowDialog();
+            ShowDialogChat();
         }
         
     }

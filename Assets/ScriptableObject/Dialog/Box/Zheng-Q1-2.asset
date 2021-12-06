@@ -10,13 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 0}
-  m_Name: zheng00_DialogSO
-  m_EditorClassIdentifier: Assembly-CSharp::DialogSO
+  m_Name: Zheng-Q1-2
+  m_EditorClassIdentifier: Assembly-CSharp::DialogBoxSO
   condition_list:
   - pathSO: {fileID: 11400000, guid: fcaa97d75632a9847bcc79621d30af5e, type: 2}
-    progress_state: 0
-  text: zheng 00 dialog, state=0, new state=1
+    progress_state: 1
+  m_first_node: {fileID: 11400000, guid: 8d0ec2e068e94a349bc123d5b4504bcc, type: 2}
   solution_list:
   - pathSO: {fileID: 11400000, guid: fcaa97d75632a9847bcc79621d30af5e, type: 2}
-    from_state: 0
-    to_state: 1
+    from_state: 1
+    to_state: 2

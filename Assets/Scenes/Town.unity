@@ -1590,7 +1590,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 800, y: 600}
@@ -2313,11 +2313,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialog_chat:
-  - {fileID: 11400000, guid: 90eb92dee8851794aa50ab4d832259d7, type: 2}
+  - {fileID: 11400000, guid: 232deda4103256048b6e3fd26a29bfb2, type: 2}
   - {fileID: 11400000, guid: 67dd6924b6c99b242a63b50e73561a3b, type: 2}
   - {fileID: 11400000, guid: b30e311ab1684444592d0a54e8aaa2fd, type: 2}
   dialog_box:
-  - {fileID: 11400000, guid: 5cc7a3c22bce56041a21343e1b3a45f6, type: 2}
+  - {fileID: 11400000, guid: 4f32522f4f010314fa759dee35037d20, type: 2}
 --- !u!1 &1509700167
 GameObject:
   m_ObjectHideFlags: 0

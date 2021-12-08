@@ -29,6 +29,7 @@ public class TextTyper : MonoBehaviour
         m_typewriter = StartCoroutine(EffectTypeWriter(text, DialogObj.GetComponent<TextMeshProUGUI>()));
     }
 
+
     private IEnumerator EffectTypeWriter(string text, TextMeshProUGUI tmp)
     {
         m_is_typing = true;
@@ -48,13 +49,21 @@ public class TextTyper : MonoBehaviour
     public void SkipEffect() 
     {
         if(m_typewriter != null)
-            StopCoroutine(m_typewriter); 
+            StopAllCoroutines(); 
         DialogObj.GetComponent<TextMeshProUGUI>().text = m_current_text;
         m_is_typing = false;
+        Debug.Log("Skipped Effect");
+    }
+
+    public void Reset()
+    {
+        m_is_typing = false;
+        m_current_text = null;
+        m_typewriter = null;
     }
 
 
-    private void Start()
+    private void Awake()
     {
         _this = this;
     }

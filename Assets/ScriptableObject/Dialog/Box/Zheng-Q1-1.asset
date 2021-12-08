@@ -9,9 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 0}
+  m_Script: {fileID: 11500000, guid: af9486013d365f543af6f222b504d5d4, type: 3}
   m_Name: Zheng-Q1-1
-  m_EditorClassIdentifier: Assembly-CSharp::DialogBoxSO
+  m_EditorClassIdentifier: 
   condition_list:
   - pathSO: {fileID: 11400000, guid: fcaa97d75632a9847bcc79621d30af5e, type: 2}
     progress_state: 0

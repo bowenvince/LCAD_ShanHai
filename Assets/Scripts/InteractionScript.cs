@@ -71,7 +71,7 @@ public class InteractionScript : MonoBehaviour
         {
             Interact_Guide_canvas.transform.localScale = new Vector3(Interact_Guide_canvas.transform.localScale.x * -1f, Interact_Guide_canvas.transform.localScale.y, Interact_Guide_canvas.transform.localScale.z);
         }
-        if (Input.GetKey(KeyCode.E) && CanInteract && current_dialogSys) 
+        if (Input.GetKey(KeyCode.E) && CanInteract && current_dialogSys && !DialogBox_started) 
         {
             ShowDialogBox();
         }
@@ -132,10 +132,8 @@ public class InteractionScript : MonoBehaviour
         if (CanInteract)
         {
             Debug.Log("Talking to ; ");
-            //show dialog canvas + fade-in
             if (current_target)
             {
-                //update text if possible
                 if (current_dialogSys)
                 {
                     DialogBoxSO current_dialog = current_dialogSys.Get_Current_Dialog_Box();
@@ -157,6 +155,7 @@ public class InteractionScript : MonoBehaviour
                         GetComponent<PlayerMovement>().enabled = false;
                         current_node = current_dialog.first_node;
                         if (!current_node) return;
+                        TextTyper._this.Reset();
                         UpdateDialogBox();
                     }
                     else

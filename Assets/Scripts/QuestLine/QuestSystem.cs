@@ -46,9 +46,18 @@ public class QuestSystem : MonoBehaviour
         }
     }
 
-    public void Start()
+    private void Awake()
     {
-        _this = this;
+        DontDestroyOnLoad(this.gameObject);
+
+        if (_this == null)
+        {
+            _this = this;
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
     }
 }
 

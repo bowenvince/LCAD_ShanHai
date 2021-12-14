@@ -38,13 +38,13 @@ public class PlayerMovement : MonoBehaviour
         if (xInput > 0) //if moving in the positive x direction (greater than zero) (right)
         {
             //set the local scale to the standard x scale, and leave y and z the same
-            transform.localScale = new Vector3(xScale, transform.localScale.y, transform.localScale.z);
+            transform.localScale = new Vector3(Mathf.Abs(xScale), transform.localScale.y, transform.localScale.z);
             player_animator.SetBool("IsWalking", true);
         }
         else if (xInput < 0) //else if moving in the negative x direction (less than zero) (left)
         {
             //set the local scale to the opposite on the x, flipping it. leave y and z alone.
-            transform.localScale = new Vector3(-xScale, transform.localScale.y, transform.localScale.z);
+            transform.localScale = new Vector3(-1 * Mathf.Abs(xScale), transform.localScale.y, transform.localScale.z);
             player_animator.SetBool("IsWalking", true);
         }
         else 

@@ -30,7 +30,7 @@ public class HoverNode : MonoBehaviour
     public bool is_complete;
     public bool is_active;
 
-
+    public HoverNodeSet parent_set;
 
     void Start()
     {
@@ -46,13 +46,17 @@ public class HoverNode : MonoBehaviour
         //is_active = false;
     }
 
-    void OnMouseOver()
+    void OnMouseEnter()
     {
-        if (!is_active)
+        if (!Input.GetMouseButton(0))
+        {
+            return;
+        }
+        else if (!is_active && !is_complete)
         {
             m_Image.color = m_FailColor;
         }
-        else 
+        else if (is_active)
         {
             if (tween_current != null)
             {
@@ -64,6 +68,8 @@ public class HoverNode : MonoBehaviour
             is_complete = true;
 
             m_Image.fillAmount = 1;
+
+            parent_set.On_Node_Completed(this);
         }
         
 
@@ -93,9 +99,25 @@ public class HoverNode : MonoBehaviour
             {
                 m_Image.fillAmount = 1;
                 m_Image.color = m_FailColor;
+                if(parent_set) parent_set.is_failed = true;
             }
             
         }
         
+    }
+
+    public void Reset()
+    {
+        tween_current.Complete();
+        tween_current = null;
+
+        m_Image.color = m_OriginalColor;
+
+        //do not restart timer on invalid input
+        //fade_out_time_left = fade_out_time;
+
+        is_complete = false;
+        is_active = false;
+
     }
 }

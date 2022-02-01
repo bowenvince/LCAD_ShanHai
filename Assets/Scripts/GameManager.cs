@@ -39,4 +39,10 @@ public class GameManager : MonoBehaviour
         Time.timeScale = 1;
         isPaused = false;
     }
+
+    public void QuitGame() 
+    {
+        Application.Quit();
+        Debug.Log("game quit");
+    }
 }

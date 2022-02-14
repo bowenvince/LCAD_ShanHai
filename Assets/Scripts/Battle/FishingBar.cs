@@ -20,6 +20,9 @@ public class FishingBar : MonoBehaviour
     public float succeed_amount_max = 100;
     public float succeed_amount = 0.05f;
 
+    //replace succeed bar with circular version
+    public Image succeedFill;
+
     public Slider failBar;
     public float fail_amount_max = 100;
     public float fail_amount = 0.05f;
@@ -97,6 +100,8 @@ public class FishingBar : MonoBehaviour
             Change_Accept_Area();
         }
 
+        //update succeed fill value
+        succeedFill.fillAmount = succeedBar.value / succeedBar.maxValue;
     }
 
     void Change_Accept_Area() 

@@ -4475,6 +4475,10 @@ PrefabInstance:
       propertyPath: Interact_Button_obj
       value: 
       objectReference: {fileID: 1877681773}
+    - target: {fileID: 353483674, guid: 2b9cadfca73707b42971c10cdab27448, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2958948173592491021, guid: 2b9cadfca73707b42971c10cdab27448,
         type: 3}
       propertyPath: m_Name

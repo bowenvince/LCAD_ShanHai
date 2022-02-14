@@ -350,6 +350,7 @@ MonoBehaviour:
   current_dialogSys: {fileID: 0}
   Auto_Dialog_Delay: 0.5
   Auto_Dialog: 1
+  Interact_Button_obj: {fileID: 0}
 --- !u!1 &7848639631718944824
 GameObject:
   m_ObjectHideFlags: 0

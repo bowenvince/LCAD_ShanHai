@@ -24,6 +24,11 @@ public class InteractionScript : MonoBehaviour
     private bool DialogBox_started = false;
     private DialogNode current_node;
 
+    //for touch screen adaption
+    [SerializeField]
+    private GameObject Interact_Button_obj;
+    private Button Interact_Button;
+
 
     private void OnTriggerEnter2D(Collider2D other)
     {
@@ -39,6 +44,11 @@ public class InteractionScript : MonoBehaviour
                 current_dialogSys = get_dialogSys;
                 StartCoroutine(WaitAndShowDialogChat(Auto_Dialog_Delay));
             }
+
+            //touch screen adaption - show & bind button with interaction
+            Interact_Button.onClick.RemoveAllListeners();
+            Interact_Button.onClick.AddListener(()=>ShowDialogBox());
+            Interact_Button_obj.SetActive(true);
         }
     }
 
@@ -61,7 +71,10 @@ public class InteractionScript : MonoBehaviour
         {
             HideDialogChat();
         }
-        
+
+        //touch screen adaption - hide button with interaction
+        Interact_Button_obj.SetActive(false);
+
     }
 
     private void Update()
@@ -71,10 +84,10 @@ public class InteractionScript : MonoBehaviour
         {
             Interact_Guide_canvas.transform.localScale = new Vector3(Interact_Guide_canvas.transform.localScale.x * -1f, Interact_Guide_canvas.transform.localScale.y, Interact_Guide_canvas.transform.localScale.z);
         }
-        if (Input.GetKey(KeyCode.E) && CanInteract && current_dialogSys && !DialogBox_started) 
+        /*if (Input.GetKey(KeyCode.E) && CanInteract && current_dialogSys && !DialogBox_started) 
         {
             ShowDialogBox();
-        }
+        }*/
     }
 
     private void Awake()
@@ -86,6 +99,9 @@ public class InteractionScript : MonoBehaviour
         DialogChat_canvas.GetComponent<CanvasGroup>().alpha = 0;
         DialogBox_canvas.SetActive(false);
         DialogBox_canvas.GetComponent<CanvasGroup>().alpha = 0;
+
+        //touch screen adaption - get button from obj
+        Interact_Button = Interact_Button_obj.GetComponent<Button>();
     }
 
     //auto dialog for chat

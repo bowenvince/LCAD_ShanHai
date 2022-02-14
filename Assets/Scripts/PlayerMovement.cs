@@ -29,7 +29,7 @@ public class PlayerMovement : MonoBehaviour
     private void FixedUpdate()
     {
         //move with input axis from input manager, used in PC
-        Move(Input.GetAxis("Horizontal"));
+        //Move(Input.GetAxis("Horizontal"));
 
         //move with touch screen
         if (moveButton_is_press) 
@@ -72,11 +72,13 @@ public class PlayerMovement : MonoBehaviour
     public void OnMoveButtonPress()
     {
         moveButton_is_press = true;
+        player_animator.SetBool("IsWalking", true);
     }
 
     public void OnMoveButtonRelease()
     {
         moveButton_is_press = false;
+        player_animator.SetBool("IsWalking", false);
     }
 
     public void UpdateMoveDirection(float direction) 

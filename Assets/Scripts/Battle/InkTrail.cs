@@ -16,7 +16,10 @@ public class InkTrail : MonoBehaviour
     {
         if (is_active && inkTrailCurrent)
         {
+            //pc version
             Vector3 position = camera_current.ScreenToWorldPoint(Input.mousePosition);
+            //touch screen version
+
             position.z = 0;
             inkTrailCurrent.transform.position = position;
         }

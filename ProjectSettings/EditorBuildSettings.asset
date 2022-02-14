@@ -11,7 +11,4 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Forest.unity
     guid: 77db900ca72d51f46a15a4049e6e6fdd
-  - enabled: 1
-    path: Assets/Scenes/Forest_Zheng.unity
-    guid: 5a1248d65b9665540ae90622ca544334
   m_configObjects: {}

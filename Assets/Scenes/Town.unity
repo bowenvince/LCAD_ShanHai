@@ -388,6 +388,8 @@ MonoBehaviour:
   events:
     m_PersistentCalls:
       m_Calls: []
+  item_image: {fileID: 0}
+  item_name: 
 --- !u!61 &209026392
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1782,6 +1784,17 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 1000002039}
+        m_MethodName: ShowNotification
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1000002039}
         m_MethodName: OnDestory
         m_Mode: 1
         m_Arguments:
@@ -1792,6 +1805,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  item_image: {fileID: 21300000, guid: b762ba9f8cf544a4e9c7bfc0a4b8adca, type: 3}
+  item_name: Zheng's Fur
 --- !u!61 &1000002040
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1881,7 +1896,7 @@ Animator:
   m_Controller: {fileID: 9100000, guid: 31e06d118867e4d4a99002dc64755a4b, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
-  m_ApplyRootMotion: 0
+  m_ApplyRootMotion: 1
   m_LinearVelocityBlending: 0
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
@@ -4533,6 +4548,17 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 2112480797}
+        m_MethodName: ShowNotification
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 2112480797}
         m_MethodName: OnDestory
         m_Mode: 1
         m_Arguments:
@@ -4543,6 +4569,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  item_image: {fileID: 21300000, guid: 0e68d753f7ba4a84ca80917f546e9edb, type: 3}
+  item_name: Holder
 --- !u!61 &2112480798
 BoxCollider2D:
   m_ObjectHideFlags: 0

@@ -13,10 +13,10 @@ public class BetiaryScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.B))
+        /*if(Input.GetKeyDown(KeyCode.B))
         { 
             Bestiary.gameObject.SetActive(!Bestiary.gameObject.activeSelf); 
-        }
+        }*/
     }
     public void OpenCloseBestiary()
     {

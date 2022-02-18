@@ -50,6 +50,24 @@ public class InteractionScript : MonoBehaviour
             Interact_Button.onClick.AddListener(()=>ShowDialogBox());
             Interact_Button_obj.SetActive(true);
         }
+        else if (other.tag == "Item")
+        {
+            CanInteract = true;
+            Interact_Guide_canvas.GetComponent<CanvasGroup>().alpha = 0;
+            Interact_Guide_canvas.GetComponent<CanvasGroup>().DOComplete();
+            Interact_Guide_canvas.GetComponent<CanvasGroup>().DOFade(1, 0.5f);
+            current_target = other;
+
+            if (other.TryGetComponent(out ITrigger get_trigger))
+            {
+                Interact_Button.onClick.RemoveAllListeners();
+                Interact_Button.onClick.AddListener(() => get_trigger.OnCall());
+                Interact_Button_obj.SetActive(true);
+            }
+
+            //touch screen adaption - show & bind button with interaction
+            
+        }
     }
 
     private void OnTriggerStay2D(Collider2D other)
@@ -70,10 +88,12 @@ public class InteractionScript : MonoBehaviour
         if (other.tag == "NPC") 
         {
             HideDialogChat();
+            current_dialogSys = null;
         }
 
         //touch screen adaption - hide button with interaction
         Interact_Button_obj.SetActive(false);
+        Interact_Button.onClick.RemoveAllListeners();
 
     }
 

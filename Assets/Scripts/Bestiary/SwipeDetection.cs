@@ -50,11 +50,13 @@ public class SwipeDetection : MonoBehaviour
             //filp page
             if (endPos.x < startPos.x)
             {
-                Debug.Log("Swipe Left");
+                //Debug.Log("Swipe Left");
+                BestiarySystem._this.FilpPage(1);
             }
             else 
             {
-                Debug.Log("Swipe Right");
+                //Debug.Log("Swipe Right");
+                BestiarySystem._this.FilpPage(-1);
             }
             
             

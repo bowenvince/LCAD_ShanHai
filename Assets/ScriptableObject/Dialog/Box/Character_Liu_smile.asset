@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 379bb87d1abf21547a343c71baac71f5, type: 3}
-  m_Name: Character_Liu
+  m_Name: Character_Liu_smile
   m_EditorClassIdentifier: 
   m_name: Liu
-  m_sprite: {fileID: 21300000, guid: a98c9c9599766064fb21b7784e519bf9, type: 3}
+  m_sprite: {fileID: 21300000, guid: e083a58bcae09bc458ec373bb71f383e, type: 3}
   m_is_player: 1

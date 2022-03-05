@@ -10,7 +10,10 @@ public class InteractionScript : MonoBehaviour
     public bool CanInteract = false;
     public GameObject Interact_Guide_canvas;
     public GameObject DialogChat_canvas;
+
     public GameObject DialogBox_canvas;
+    public GameObject Avatar_left;
+    public GameObject Avatar_right;
 
     private Collider2D current_target;
 
@@ -224,8 +227,23 @@ public class InteractionScript : MonoBehaviour
                 return;
             }
             //update sprite
-            if (current_node)
-                DialogBox_canvas.GetComponentInChildren<Image>().sprite = current_node.NarrationLine_current.Character.Sprite;
+            if (current_node) 
+            {
+                if (current_node.NarrationLine_current.Character.is_player)
+                {
+                    //simple show the current and hide the other avatar
+                    Avatar_right.SetActive(true);
+                    Avatar_left.SetActive(false);
+                    Avatar_right.GetComponent<Image>().sprite = current_node.NarrationLine_current.Character.Sprite;
+                }
+                else 
+                {
+                    //simple show the current and hide the other avatar
+                    Avatar_right.SetActive(false);
+                    Avatar_left.SetActive(true);
+                    Avatar_left.GetComponent<Image>().sprite = current_node.NarrationLine_current.Character.Sprite;
+                }
+            }
             //update name
 
             string named_text = current_node.NarrationLine_current.Character.Name +": "+ current_node.NarrationLine_current.Text;

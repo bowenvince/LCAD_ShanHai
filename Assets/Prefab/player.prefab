@@ -19,7 +19,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &353483675
 RectTransform:
   m_ObjectHideFlags: 0
@@ -347,6 +347,8 @@ MonoBehaviour:
   Interact_Guide_canvas: {fileID: 353483674}
   DialogChat_canvas: {fileID: 0}
   DialogBox_canvas: {fileID: 0}
+  Avatar_left: {fileID: 0}
+  Avatar_right: {fileID: 0}
   current_dialogSys: {fileID: 0}
   Auto_Dialog_Delay: 0.5
   Auto_Dialog: 1

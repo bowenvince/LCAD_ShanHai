@@ -11,8 +11,11 @@ public class SceneTransition : MonoBehaviour
     public List<SceneSet> SceneSetList;
 
     public string default_sceneToLoad;
+    public int default_destination;
 
     public bool facing_right = true;
+
+    
 
     [System.Serializable]
     public class SceneSet
@@ -40,7 +43,8 @@ public class SceneTransition : MonoBehaviour
                 return;
             }
         }
-        SceneTransitionHandler._this.SceneTransition(default_sceneToLoad, 0, facing_right);
+        if(SceneManager.GetSceneByName(default_sceneToLoad) != null)
+            SceneTransitionHandler._this.SceneTransition(default_sceneToLoad, default_destination, facing_right);
     }
 }
 

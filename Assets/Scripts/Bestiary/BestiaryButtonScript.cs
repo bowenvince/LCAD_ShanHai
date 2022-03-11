@@ -27,13 +27,15 @@ public class BestiaryButtonScript : MonoBehaviour
         if(isBestiaryOpen == false)
         {
             bestiary.SetActive(true); //open the bestiary
-            gameManager.PauseGame(); //pause the game so player can not continue to move
+            //gameManager.PauseGame(); //pause the game so player can not continue to move
+            gameManager.DisableMove();
             isBestiaryOpen = true;
         }
         else //if the bestiary is already open
         {
             bestiary.SetActive(false); //close the bestiary
-            gameManager.UnpauseGame(); //unpause the game so the player may move
+            //gameManager.UnpauseGame(); //unpause the game so the player may move
+            gameManager.EnableMove();
             isBestiaryOpen = false; 
         }
     }

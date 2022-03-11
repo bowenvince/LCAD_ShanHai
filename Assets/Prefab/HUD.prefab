@@ -2576,7 +2576,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &5984761916452186147
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3360,7 +3360,7 @@ MonoBehaviour:
   Bestiary: {fileID: 1660576684580916682}
   isBestiaryOpen: 0
   gameManager: {fileID: 0}
-  current_tab: {fileID: 5400471487942566362}
+  current_tab: {fileID: 1540198312037850069}
 --- !u!1 &1660576684580916682
 GameObject:
   m_ObjectHideFlags: 0

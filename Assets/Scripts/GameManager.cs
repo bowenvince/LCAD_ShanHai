@@ -10,6 +10,10 @@ public class GameManager : MonoBehaviour
 {
     public bool isPaused;
 
+    public bool Moveable;
+
+    public PlayerMovement playerMovement;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -38,6 +42,18 @@ public class GameManager : MonoBehaviour
         //reset timescale back to normal time
         Time.timeScale = 1;
         isPaused = false;
+    }
+
+    public void EnableMove() 
+    {
+        if (playerMovement != null)
+            playerMovement.enabled = true;
+    }
+
+    public void DisableMove()
+    {
+        if (playerMovement != null)
+            playerMovement.enabled = false;
     }
 
     public void QuitGame() 

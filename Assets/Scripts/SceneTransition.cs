@@ -5,13 +5,13 @@ using UnityEngine.SceneManagement;
 
 public class SceneTransition : MonoBehaviour
 {
-    public QuestPathSO quest_path;
 
     [SerializeField]
     public List<SceneSet> SceneSetList;
 
     public string default_sceneToLoad;
     public int default_destination;
+    public bool default_HUB_display = true;
 
     public bool facing_right = true;
 
@@ -20,8 +20,11 @@ public class SceneTransition : MonoBehaviour
     [System.Serializable]
     public class SceneSet
     {
+        public QuestPathSO quest_path;
         public int valid_state;
         public string sceneToLoad;
+        public int destination;
+        public bool HUD_display = true;
     }
 
     public void OnTriggerEnter2D(Collider2D other)
@@ -37,14 +40,19 @@ public class SceneTransition : MonoBehaviour
     {
         for (int i = 0; i < SceneSetList.Count; i++)
         {
-            if (QuestSystem._this.Check_Condition(quest_path, SceneSetList[i].valid_state))
+            if (QuestSystem._this.Check_Condition(SceneSetList[i].quest_path, SceneSetList[i].valid_state))
             {
-                SceneTransitionHandler._this.SceneTransition(SceneSetList[i].sceneToLoad, i, facing_right);
+                GameManager._this.EnableHUD(SceneSetList[i].HUD_display);
+                SceneTransitionHandler._this.SceneTransition(SceneSetList[i].sceneToLoad, SceneSetList[i].destination, facing_right);
                 return;
             }
         }
-        if(SceneManager.GetSceneByName(default_sceneToLoad) != null)
+        if (SceneManager.GetSceneByName(default_sceneToLoad) != null) 
+        {
+            GameManager._this.EnableHUD(default_HUB_display);
             SceneTransitionHandler._this.SceneTransition(default_sceneToLoad, default_destination, facing_right);
+        }
+            
     }
 }
 

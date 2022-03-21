@@ -536,6 +536,27 @@ PrefabInstance:
       propertyPath: fail_amount
       value: 0.1
       objectReference: {fileID: 0}
+    - target: {fileID: 2068094457921137975, guid: 238d3992b0d23b9448ff69ee4e64e3e3,
+        type: 3}
+      propertyPath: result_questPath
+      value: 
+      objectReference: {fileID: 11400000, guid: fcaa97d75632a9847bcc79621d30af5e,
+        type: 2}
+    - target: {fileID: 2068094457921137975, guid: 238d3992b0d23b9448ff69ee4e64e3e3,
+        type: 3}
+      propertyPath: result_questPath_from
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2068094457921137975, guid: 238d3992b0d23b9448ff69ee4e64e3e3,
+        type: 3}
+      propertyPath: result_questPath_to
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2068094457921137975, guid: 238d3992b0d23b9448ff69ee4e64e3e3,
+        type: 3}
+      propertyPath: update_questPath
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2068094458084693253, guid: 238d3992b0d23b9448ff69ee4e64e3e3,
         type: 3}
       propertyPath: m_AnchorMax.y
@@ -1236,6 +1257,8 @@ GameObject:
   m_Component:
   - component: {fileID: 376271080}
   - component: {fileID: 376271079}
+  - component: {fileID: 376271082}
+  - component: {fileID: 376271081}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: GameManager
@@ -1258,6 +1281,7 @@ MonoBehaviour:
   isPaused: 0
   Moveable: 0
   playerMovement: {fileID: 246783253}
+  HUD: {fileID: 0}
 --- !u!4 &376271080
 Transform:
   m_ObjectHideFlags: 0
@@ -1272,6 +1296,40 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 21
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &376271081
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 376271078}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f231c4fb786f3946a6b90b886c48677, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_HorizontalAxis: Horizontal
+  m_VerticalAxis: Vertical
+  m_SubmitButton: Submit
+  m_CancelButton: Cancel
+  m_InputActionsPerSecond: 10
+  m_RepeatDelay: 0.5
+  m_ForceModuleActive: 0
+--- !u!114 &376271082
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 376271078}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76c392e42b5098c458856cdf6ecaaaa1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_FirstSelected: {fileID: 0}
+  m_sendNavigationEvents: 1
+  m_DragThreshold: 10
 --- !u!1 &412320229
 GameObject:
   m_ObjectHideFlags: 0
@@ -2138,6 +2196,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: HUD
       objectReference: {fileID: 0}
+    - target: {fileID: 1660576684402924943, guid: 0f75ca8b34e628e4680be95da730bfc2,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2294245519987180035, guid: 0f75ca8b34e628e4680be95da730bfc2,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2250,46 +2313,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0f75ca8b34e628e4680be95da730bfc2, type: 3}
---- !u!1 &1326388203 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1660576684402924943, guid: 0f75ca8b34e628e4680be95da730bfc2,
-    type: 3}
-  m_PrefabInstance: {fileID: 1326388202}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1326388204
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1326388203}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4f231c4fb786f3946a6b90b886c48677, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_HorizontalAxis: Horizontal
-  m_VerticalAxis: Vertical
-  m_SubmitButton: Submit
-  m_CancelButton: Cancel
-  m_InputActionsPerSecond: 10
-  m_RepeatDelay: 0.5
-  m_ForceModuleActive: 0
---- !u!114 &1326388205
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1326388203}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 76c392e42b5098c458856cdf6ecaaaa1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_FirstSelected: {fileID: 0}
-  m_sendNavigationEvents: 1
-  m_DragThreshold: 10
 --- !u!1 &1356469346
 GameObject:
   m_ObjectHideFlags: 0
@@ -2883,6 +2906,10 @@ PrefabInstance:
     - target: {fileID: 1838073866, guid: 8880534e94659244ca90545c1fa17c62, type: 3}
       propertyPath: quest_path
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1838073866, guid: 8880534e94659244ca90545c1fa17c62, type: 3}
+      propertyPath: default_HUB_display
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3789808570852949638, guid: 8880534e94659244ca90545c1fa17c62,
         type: 3}

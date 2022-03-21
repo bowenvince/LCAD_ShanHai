@@ -950,6 +950,8 @@ GameObject:
   m_Component:
   - component: {fileID: 376271080}
   - component: {fileID: 376271079}
+  - component: {fileID: 376271082}
+  - component: {fileID: 376271081}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: GameManager
@@ -972,6 +974,7 @@ MonoBehaviour:
   isPaused: 0
   Moveable: 0
   playerMovement: {fileID: 2958948173545458405}
+  HUD: {fileID: 0}
 --- !u!4 &376271080
 Transform:
   m_ObjectHideFlags: 0
@@ -986,6 +989,40 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &376271081
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 376271078}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f231c4fb786f3946a6b90b886c48677, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_HorizontalAxis: Horizontal
+  m_VerticalAxis: Vertical
+  m_SubmitButton: Submit
+  m_CancelButton: Cancel
+  m_InputActionsPerSecond: 10
+  m_RepeatDelay: 0.5
+  m_ForceModuleActive: 0
+--- !u!114 &376271082
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 376271078}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76c392e42b5098c458856cdf6ecaaaa1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_FirstSelected: {fileID: 0}
+  m_sendNavigationEvents: 1
+  m_DragThreshold: 10
 --- !u!1 &459357881
 GameObject:
   m_ObjectHideFlags: 0
@@ -3753,7 +3790,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1901624135
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4215,43 +4252,15 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 501959602, guid: 0f75ca8b34e628e4680be95da730bfc2, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 1268432582, guid: 0f75ca8b34e628e4680be95da730bfc2, type: 3}
-      propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 2958948173545458405}
-    - target: {fileID: 1268432582, guid: 0f75ca8b34e628e4680be95da730bfc2, type: 3}
-      propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[1].m_Target
-      value: 
-      objectReference: {fileID: 2958948173545458405}
-    - target: {fileID: 1268432582, guid: 0f75ca8b34e628e4680be95da730bfc2, type: 3}
-      propertyPath: m_Delegates.Array.data[1].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 2958948173545458405}
-    - target: {fileID: 1973125104, guid: 0f75ca8b34e628e4680be95da730bfc2, type: 3}
-      propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 2958948173545458405}
-    - target: {fileID: 1973125104, guid: 0f75ca8b34e628e4680be95da730bfc2, type: 3}
-      propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[1].m_Target
-      value: 
-      objectReference: {fileID: 2958948173545458405}
-    - target: {fileID: 1973125104, guid: 0f75ca8b34e628e4680be95da730bfc2, type: 3}
-      propertyPath: m_Delegates.Array.data[1].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 2958948173545458405}
-    - target: {fileID: 130496886436698337, guid: 0f75ca8b34e628e4680be95da730bfc2,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 1660576684402924943, guid: 0f75ca8b34e628e4680be95da730bfc2,
         type: 3}
       propertyPath: m_Name
       value: HUD
+      objectReference: {fileID: 0}
+    - target: {fileID: 1660576684402924943, guid: 0f75ca8b34e628e4680be95da730bfc2,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2294245519987180035, guid: 0f75ca8b34e628e4680be95da730bfc2,
         type: 3}
@@ -4568,12 +4577,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 459b2bc4f25c05a43b8b01d1db626828, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  quest_path: {fileID: 11400000, guid: fcaa97d75632a9847bcc79621d30af5e, type: 2}
   SceneSetList:
-  - valid_state: 2
+  - quest_path: {fileID: 11400000, guid: fcaa97d75632a9847bcc79621d30af5e, type: 2}
+    valid_state: 2
     sceneToLoad: Forest_Zheng
+    destination: 0
+    HUD_display: 0
   default_sceneToLoad: Forest
   default_destination: 0
+  default_HUB_display: 1
   facing_right: 0
 --- !u!4 &5321987681585748512
 Transform:

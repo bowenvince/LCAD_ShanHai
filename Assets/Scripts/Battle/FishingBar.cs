@@ -42,6 +42,12 @@ public class FishingBar : MonoBehaviour
     public GameObject succeed_text;
     public GameObject failed_text;
 
+    //update questLine
+    public bool update_questPath = false;
+    public QuestPathSO result_questPath;
+    public int result_questPath_from;
+    public int result_questPath_to;
+
     public bool button_is_press = false;
 
     private void Start()
@@ -144,6 +150,9 @@ public class FishingBar : MonoBehaviour
             is_active = false;
             succeed_text.SetActive(true);
             result_panel.SetActive(true);
+
+            //update quest
+            QuestSystem._this.Update_State(result_questPath, result_questPath_from, result_questPath_to);
         }
         else if(failBar.value >= fail_amount_max)
         {

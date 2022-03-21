@@ -6,7 +6,7 @@ using UnityEngine;
  * a lot more
  * */
 
-public class GameManager : MonoBehaviour
+public class GameManager : Singleton<GameManager>
 {
     public bool isPaused;
 
@@ -14,17 +14,14 @@ public class GameManager : MonoBehaviour
 
     public PlayerMovement playerMovement;
 
+    public GameObject HUD;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        HUD = GameObject.Find("HUD");
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 
     //will be called all over the place, right now just for opening the bestiary
     public void PauseGame()
@@ -61,4 +58,13 @@ public class GameManager : MonoBehaviour
         Application.Quit();
         Debug.Log("game quit");
     }
+
+    public void EnableHUD(bool state) 
+    {
+        //just disable all 3 buttons
+        HUD.transform.GetChild(0).gameObject.SetActive(state);
+        HUD.transform.GetChild(1).gameObject.SetActive(state);
+        HUD.transform.GetChild(2).gameObject.SetActive(state);
+    }
+
 }

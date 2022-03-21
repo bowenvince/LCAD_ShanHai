@@ -11,14 +11,6 @@ public class BestiaryButtonScript : MonoBehaviour
 {
     public bool isBestiaryOpen = false; // will need this to decide whether to open or close bestiary
     public GameObject bestiary; // will need to drag into the inspector
-    GameManager gameManager;
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        // find the game manager, which we'll need to pause the game
-        gameManager = GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManager>();
-    }
 
     //this method will be called by the BestiaryButton's OnClick in the inspector
     public void OpenCloseBestiary()
@@ -28,14 +20,14 @@ public class BestiaryButtonScript : MonoBehaviour
         {
             bestiary.SetActive(true); //open the bestiary
             //gameManager.PauseGame(); //pause the game so player can not continue to move
-            gameManager.DisableMove();
+            GameManager._this.DisableMove();
             isBestiaryOpen = true;
         }
         else //if the bestiary is already open
         {
             bestiary.SetActive(false); //close the bestiary
             //gameManager.UnpauseGame(); //unpause the game so the player may move
-            gameManager.EnableMove();
+            GameManager._this.EnableMove();
             isBestiaryOpen = false; 
         }
     }

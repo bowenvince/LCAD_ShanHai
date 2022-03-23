@@ -12,11 +12,20 @@ EditorBuildSettings:
     path: Assets/Scenes/Home_Tutorial.unity
     guid: 4db5ff11cf9016f4d8aa9af8bb0bf605
   - enabled: 1
-    path: Assets/Scenes/Town.unity
-    guid: 2cda990e2423bbf4892e6590ba056729
+    path: Assets/Scenes/OutsideHome.unity
+    guid: e6a78b2aea39b0a4ebc1b346f882c4cc
+  - enabled: 1
+    path: Assets/Scenes/Forest_Tutorial.unity
+    guid: 75487865b493a1340a05d5c5ce7584cb
+  - enabled: 1
+    path: Assets/Scenes/Forest_Rabbit_Tutorial.unity
+    guid: 802cadfca9c362346ba3ce04e05f7c28
   - enabled: 1
     path: Assets/Scenes/Forest.unity
     guid: 77db900ca72d51f46a15a4049e6e6fdd
+  - enabled: 1
+    path: Assets/Scenes/Town.unity
+    guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
     path: Assets/Scenes/Forest_Zheng.unity
     guid: 0c9e9398180bd4c41ad4a093c04485f9

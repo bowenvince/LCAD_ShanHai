@@ -1919,6 +1919,7 @@ GameObject:
   - component: {fileID: 1000002040}
   - component: {fileID: 1000002042}
   - component: {fileID: 1000002039}
+  - component: {fileID: 1000002043}
   m_Layer: 0
   m_Name: Bestinary
   m_TagString: Item
@@ -2004,6 +2005,17 @@ MonoBehaviour:
       - m_Target: {fileID: 338203659}
         m_MethodName: SetActive
         m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 1000002043}
+        m_MethodName: UpdateQuest
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -2109,6 +2121,24 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &1000002043
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1000002037}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d5dc659d607fc1428a1b8a166a2d894, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  events:
+    m_PersistentCalls:
+      m_Calls: []
+  pathSO: {fileID: 11400000, guid: 958a3789a94e5194eb51579ff736e34c, type: 2}
+  from: 0
+  to: 1
 --- !u!1 &1012759431
 GameObject:
   m_ObjectHideFlags: 0
@@ -4317,6 +4347,7 @@ GameObject:
   - component: {fileID: 2112480798}
   - component: {fileID: 2112480800}
   - component: {fileID: 2112480797}
+  - component: {fileID: 2112480801}
   m_Layer: 0
   m_Name: Tailsman
   m_TagString: Item
@@ -4402,6 +4433,17 @@ MonoBehaviour:
       - m_Target: {fileID: 1660107926}
         m_MethodName: SetActive
         m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 2112480801}
+        m_MethodName: UpdateQuest
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -4507,6 +4549,24 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &2112480801
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2112480795}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d5dc659d607fc1428a1b8a166a2d894, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  events:
+    m_PersistentCalls:
+      m_Calls: []
+  pathSO: {fileID: 11400000, guid: 958a3789a94e5194eb51579ff736e34c, type: 2}
+  from: 1
+  to: 2
 --- !u!1001 &1660576684654587137
 PrefabInstance:
   m_ObjectHideFlags: 0

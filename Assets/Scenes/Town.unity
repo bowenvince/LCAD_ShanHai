@@ -2462,7 +2462,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1317330571}
   m_Layer: 0
-  m_Name: Position (1)
+  m_Name: Position_right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4584,7 +4584,7 @@ MonoBehaviour:
     destination: 0
     HUD_display: 0
   default_sceneToLoad: Forest
-  default_destination: 0
+  default_destination: 2
   default_HUB_display: 1
   facing_right: 0
 --- !u!4 &5321987681585748512
@@ -4611,7 +4611,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5321987681585748512}
   m_Layer: 0
-  m_Name: Position
+  m_Name: Position_left
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4727,7 +4727,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9026169445802868923}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -31.66, y: -1.93, z: -3.6191406}
+  m_LocalPosition: {x: -31.22, y: -1.93, z: -3.6191406}
   m_LocalScale: {x: 2.0254, y: 2.53175, z: 2.0254}
   m_Children:
   - {fileID: 5321987681585748512}

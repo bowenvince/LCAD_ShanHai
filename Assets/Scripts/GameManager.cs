@@ -61,7 +61,8 @@ public class GameManager : Singleton<GameManager>
 
     public void EnableHUD(bool state) 
     {
-        //just disable all 3 buttons
+        if (HUD == null) return;
+        //set all 3 buttons
         HUD.transform.GetChild(0).gameObject.SetActive(state);
         HUD.transform.GetChild(1).gameObject.SetActive(state);
         HUD.transform.GetChild(2).gameObject.SetActive(state);

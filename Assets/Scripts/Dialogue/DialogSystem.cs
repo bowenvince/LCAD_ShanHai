@@ -2,11 +2,13 @@
 using System.Collections.Generic;
 using System;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class DialogSystem : MonoBehaviour
 {
     public List<DialogChatSO> dialog_chat;
     public List<DialogBoxSO> dialog_box;
+    public List<UnityEvent> do_after_box;
 
 
     // check if any dialog match current condition, return a random one from all valid
@@ -38,6 +40,19 @@ public class DialogSystem : MonoBehaviour
             }
         }
         return null;
+    }
+
+    public int Get_Current_Dialog_Box_Index()
+    {
+        for (int i = 0; i < dialog_box.Count; i++) 
+        {
+            DialogBoxSO dialog = dialog_box[i];
+            if (dialog.Check_Condition())
+            {
+                return i;
+            }
+        }
+        return -1;
     }
 }
 

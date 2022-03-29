@@ -4,6 +4,7 @@ using UnityEngine;
 using DG.Tweening;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.Events;
 
 public class InteractionScript : MonoBehaviour
 {
@@ -26,6 +27,7 @@ public class InteractionScript : MonoBehaviour
     //for DialogBox
     private bool DialogBox_started = false;
     private DialogNode current_node;
+    private UnityEvent current_do_after_box;
 
     //for touch screen adaption
     [SerializeField]
@@ -176,6 +178,12 @@ public class InteractionScript : MonoBehaviour
                 if (current_dialogSys)
                 {
                     DialogBoxSO current_dialog = current_dialogSys.Get_Current_Dialog_Box();
+                    int current_dialog_index = current_dialogSys.Get_Current_Dialog_Box_Index();
+                    if (current_dialog_index >= 0 && current_dialog_index < current_dialogSys.do_after_box.Count) 
+                    {
+                        current_do_after_box = current_dialogSys.do_after_box[current_dialog_index];
+                    }
+
                     Debug.Log("current_dialog = " + current_dialog);
 
                     if (current_dialog != null)
@@ -269,6 +277,8 @@ public class InteractionScript : MonoBehaviour
         HideDialogBox();
         //re-enable playermovement
         GetComponent<PlayerMovement>().enabled = true;
+        //do after box
+        current_do_after_box.Invoke();
     }
 
     public void HideDialogChat() 

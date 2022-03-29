@@ -1482,29 +1482,14 @@ PrefabInstance:
       objectReference: {fileID: 246783254}
     - target: {fileID: 5420793806600591467, guid: efec35be384414b4a8e17f8ad49c5a3f,
         type: 3}
-      propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: UpdateMoveDirection
-      objectReference: {fileID: 0}
-    - target: {fileID: 5420793806600591467, guid: efec35be384414b4a8e17f8ad49c5a3f,
-        type: 3}
       propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
       objectReference: {fileID: 246783254}
     - target: {fileID: 5420793806600591467, guid: efec35be384414b4a8e17f8ad49c5a3f,
         type: 3}
-      propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
-      value: OnMoveButtonPress
-      objectReference: {fileID: 0}
-    - target: {fileID: 5420793806600591467, guid: efec35be384414b4a8e17f8ad49c5a3f,
-        type: 3}
       propertyPath: m_Delegates.Array.data[1].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 246783254}
-    - target: {fileID: 5420793806600591467, guid: efec35be384414b4a8e17f8ad49c5a3f,
-        type: 3}
-      propertyPath: m_Delegates.Array.data[1].callback.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: OnMoveButtonRelease
-      objectReference: {fileID: 0}
     - target: {fileID: 5420793806768380253, guid: efec35be384414b4a8e17f8ad49c5a3f,
         type: 3}
       propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -1512,29 +1497,14 @@ PrefabInstance:
       objectReference: {fileID: 246783254}
     - target: {fileID: 5420793806768380253, guid: efec35be384414b4a8e17f8ad49c5a3f,
         type: 3}
-      propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: UpdateMoveDirection
-      objectReference: {fileID: 0}
-    - target: {fileID: 5420793806768380253, guid: efec35be384414b4a8e17f8ad49c5a3f,
-        type: 3}
       propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
       objectReference: {fileID: 246783254}
     - target: {fileID: 5420793806768380253, guid: efec35be384414b4a8e17f8ad49c5a3f,
         type: 3}
-      propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
-      value: OnMoveButtonPress
-      objectReference: {fileID: 0}
-    - target: {fileID: 5420793806768380253, guid: efec35be384414b4a8e17f8ad49c5a3f,
-        type: 3}
       propertyPath: m_Delegates.Array.data[1].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 246783254}
-    - target: {fileID: 5420793806768380253, guid: efec35be384414b4a8e17f8ad49c5a3f,
-        type: 3}
-      propertyPath: m_Delegates.Array.data[1].callback.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: OnMoveButtonRelease
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: efec35be384414b4a8e17f8ad49c5a3f, type: 3}
 --- !u!1 &1243093730 stripped

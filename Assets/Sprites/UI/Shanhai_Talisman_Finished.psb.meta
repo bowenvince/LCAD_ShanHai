@@ -94,8 +94,8 @@ ScriptedImporter:
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 1831
-      y: 530
+      x: 1680
+      y: 840
       width: 208
       height: 208
     spriteID: a41c2a4c04b7b214eb9c8d0312ad0c3a
@@ -108,7 +108,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     parentGroupIndex: -1
-    uvTransform: {x: 1024, y: 241}
+    uvTransform: {x: 873, y: 551}
   - name: NATURE GLOW
     originalName: 
     pivot: {x: 0.5, y: 0.5}
@@ -138,8 +138,8 @@ ScriptedImporter:
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 1166
-      y: 852
+      x: 1032
+      y: 1068
       width: 135
       height: 108
     spriteID: dcb8aee171264144d9ec276a5ed9ad48
@@ -152,7 +152,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     parentGroupIndex: -1
-    uvTransform: {x: 90, y: 432}
+    uvTransform: {x: -44, y: 648}
   - name: METAL GLOW
     originalName: 
     pivot: {x: 0.5, y: 0.5}
@@ -182,7 +182,7 @@ ScriptedImporter:
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 1032
+      x: 1896
       y: 850
       width: 124
       height: 141
@@ -196,7 +196,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     parentGroupIndex: -1
-    uvTransform: {x: 335, y: 718}
+    uvTransform: {x: 1199, y: 718}
   - name: WATER GLOW
     originalName: 
     pivot: {x: 0.5, y: 0.5}
@@ -204,7 +204,7 @@ ScriptedImporter:
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 1032
+      x: 1896
       y: 1023
       width: 115
       height: 133
@@ -218,7 +218,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     parentGroupIndex: -1
-    uvTransform: {x: 414, y: 615}
+    uvTransform: {x: 1278, y: 615}
   - name: BLANK
     originalName: 
     pivot: {x: 0.5, y: 0.5}
@@ -263,6 +263,94 @@ ScriptedImporter:
     tessellationDetail: 0
     parentGroupIndex: -1
     uvTransform: {x: 4, y: 4}
+  - name: METAL Gem
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1831
+      y: 530
+      width: 208
+      height: 208
+    spriteID: a81d210a56fa18d47984bca197851f76
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 1024, y: 241}
+  - name: FIRE Gem
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1032
+      y: 840
+      width: 208
+      height: 208
+    spriteID: a108cc662ee1dc04fb65b7b2c29494b1
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 225, y: 551}
+  - name: WATER Gem
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1248
+      y: 840
+      width: 208
+      height: 208
+    spriteID: 97ba9e77d17251e499d9f7facb2c4574
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 441, y: 551}
+  - name: EARTH Gem
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1464
+      y: 840
+      width: 208
+      height: 208
+    spriteID: 63e7c4caec733dc4fbd5e5f50098762b
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 657, y: 551}
   platformSettings: []
   mosaicLayers: 1
   documentPivot: {x: 0, y: 0}
@@ -282,13 +370,41 @@ ScriptedImporter:
   characterMode: 1
   mosaicPSDLayers: []
   rigPSDLayers:
+  - name: METAL Gem
+    spriteName: METAL Gem
+    isGroup: 0
+    parentIndex: -1
+    spriteID: a81d210a56fa18d47984bca197851f76
+    layerID: 173
+    mosaicPosition: {x: 1831, y: 530}
+  - name: FIRE Gem
+    spriteName: FIRE Gem
+    isGroup: 0
+    parentIndex: -1
+    spriteID: a108cc662ee1dc04fb65b7b2c29494b1
+    layerID: 174
+    mosaicPosition: {x: 1032, y: 840}
+  - name: WATER Gem
+    spriteName: WATER Gem
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 97ba9e77d17251e499d9f7facb2c4574
+    layerID: 175
+    mosaicPosition: {x: 1248, y: 840}
+  - name: EARTH Gem
+    spriteName: EARTH Gem
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 63e7c4caec733dc4fbd5e5f50098762b
+    layerID: 176
+    mosaicPosition: {x: 1464, y: 840}
   - name: NATURE Gem
     spriteName: NATURE Gem
     isGroup: 0
     parentIndex: -1
     spriteID: a41c2a4c04b7b214eb9c8d0312ad0c3a
     layerID: 177
-    mosaicPosition: {x: 1831, y: 530}
+    mosaicPosition: {x: 1680, y: 840}
   - name: NATURE GLOW
     spriteName: NATURE GLOW
     isGroup: 0
@@ -302,7 +418,7 @@ ScriptedImporter:
     parentIndex: -1
     spriteID: dcb8aee171264144d9ec276a5ed9ad48
     layerID: 205
-    mosaicPosition: {x: 1166, y: 840}
+    mosaicPosition: {x: 1032, y: 1056}
   - name: METAL GLOW
     spriteName: METAL GLOW
     isGroup: 0
@@ -316,14 +432,14 @@ ScriptedImporter:
     parentIndex: -1
     spriteID: bdc6d030d65e02748b04a229ef2aff74
     layerID: 203
-    mosaicPosition: {x: 1032, y: 840}
+    mosaicPosition: {x: 1896, y: 840}
   - name: WATER GLOW
     spriteName: WATER GLOW
     isGroup: 0
     parentIndex: -1
     spriteID: 08be9c0d2e3df544c92c73ca5093c14c
     layerID: 202
-    mosaicPosition: {x: 1032, y: 1007}
+    mosaicPosition: {x: 1896, y: 1007}
   - name: BLANK
     spriteName: BLANK
     isGroup: 0

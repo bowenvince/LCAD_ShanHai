@@ -27,6 +27,9 @@ public class FishingBar : MonoBehaviour
     public float fail_amount_max = 100;
     public float fail_amount = 0.05f;
 
+    //replace fail bar with rage bar version
+    public Image failFill;
+
     public RectTransform current_accept_area_left;
     public RectTransform current_accept_area_right;
     public RectTransform current_accept_area;
@@ -108,6 +111,8 @@ public class FishingBar : MonoBehaviour
 
         //update succeed fill value
         succeedFill.fillAmount = succeedBar.value / succeedBar.maxValue;
+        //update fail fill value
+        failFill.fillAmount = failBar.value / failBar.maxValue;
     }
 
     void Change_Accept_Area() 

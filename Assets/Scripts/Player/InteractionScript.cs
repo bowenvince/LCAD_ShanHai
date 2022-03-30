@@ -32,7 +32,12 @@ public class InteractionScript : MonoBehaviour
     //for touch screen adaption
     [SerializeField]
     private GameObject Interact_Button_obj;
+    [SerializeField]
+    private Sprite Interact_Button_Sprite_Talk;
+    [SerializeField]
+    private Sprite Interact_Button_Sprite_Pick;
     private Button Interact_Button;
+
 
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -44,16 +49,20 @@ public class InteractionScript : MonoBehaviour
             Interact_Guide_canvas.GetComponent<CanvasGroup>().DOComplete();
             Interact_Guide_canvas.GetComponent<CanvasGroup>().DOFade(1, 0.5f);
             current_target = other;
+
             if (other.TryGetComponent(out DialogSystem get_dialogSys)) 
             {
                 current_dialogSys = get_dialogSys;
+                //show dialog chat
                 StartCoroutine(WaitAndShowDialogChat(Auto_Dialog_Delay));
-            }
 
-            //touch screen adaption - show & bind button with interaction
-            Interact_Button.onClick.RemoveAllListeners();
-            Interact_Button.onClick.AddListener(()=>ShowDialogBox());
-            Interact_Button_obj.SetActive(true);
+                //touch screen adaption - show & bind button with interaction
+                Interact_Button.onClick.RemoveAllListeners();
+                Interact_Button.onClick.AddListener(() => ShowDialogBox());
+                Interact_Button_obj.SetActive(true);
+                Interact_Button_obj.GetComponent<Image>().sprite = Interact_Button_Sprite_Talk;
+            }
+            
         }
         else if (other.tag == "Item")
         {
@@ -65,12 +74,14 @@ public class InteractionScript : MonoBehaviour
 
             if (other.TryGetComponent(out ITrigger get_trigger))
             {
+                //touch screen adaption - show & bind button with interaction
                 Interact_Button.onClick.RemoveAllListeners();
                 Interact_Button.onClick.AddListener(() => get_trigger.OnCall());
                 Interact_Button_obj.SetActive(true);
+                Interact_Button_obj.GetComponent<Image>().sprite = Interact_Button_Sprite_Pick;
             }
 
-            //touch screen adaption - show & bind button with interaction
+            
             
         }
     }

@@ -353,6 +353,10 @@ MonoBehaviour:
   Auto_Dialog_Delay: 0.5
   Auto_Dialog: 1
   Interact_Button_obj: {fileID: 0}
+  Interact_Button_Sprite_Talk: {fileID: 21300000, guid: 345101cafbde53e44be92f507782f399,
+    type: 3}
+  Interact_Button_Sprite_Pick: {fileID: 21300000, guid: 1fd6083f32f10a841a5e97a3bcf233ef,
+    type: 3}
 --- !u!1 &7848639631718944824
 GameObject:
   m_ObjectHideFlags: 0

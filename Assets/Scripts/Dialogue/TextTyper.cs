@@ -52,7 +52,7 @@ public class TextTyper : MonoBehaviour
             StopAllCoroutines(); 
         DialogObj.GetComponent<TextMeshProUGUI>().text = m_current_text;
         m_is_typing = false;
-        Debug.Log("Skipped Effect");
+        //Debug.Log("Skipped Effect");
     }
 
     public void Reset()

@@ -9,8 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 379bb87d1abf21547a343c71baac71f5, type: 3}
-  m_Name: Character_Sun
+  m_Script: {fileID: 11500000, guid: 0da33427f8bdcf7438a94de2e7143be6, type: 3}
+  m_Name: bookstore_SO
   m_EditorClassIdentifier: 
-  m_name: Sun
-  m_sprite: {fileID: 21300000, guid: 62a29da30d235314bb96c8a0bbd1f823, type: 3}
+  path_name: "\u4E66\u5E97\u8001\u677F"

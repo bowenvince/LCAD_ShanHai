@@ -145,7 +145,7 @@ public class InteractionScript : MonoBehaviour
     {
         if (Auto_Dialog && CanInteract)
         {
-            Debug.Log("Talking to ; ");
+            //Debug.Log("Talking to ; ");
             //show dialog canvas + fade-in
             if (current_target)
             {
@@ -183,7 +183,7 @@ public class InteractionScript : MonoBehaviour
     {
         if (CanInteract)
         {
-            Debug.Log("Talking to ; ");
+            //Debug.Log("Talking to ; ");
             if (current_target)
             {
                 if (current_dialogSys)
@@ -195,7 +195,7 @@ public class InteractionScript : MonoBehaviour
                         current_do_after_box = current_dialogSys.do_after_box[current_dialog_index];
                     }
 
-                    Debug.Log("current_dialog = " + current_dialog);
+                    //Debug.Log("current_dialog = " + current_dialog);
 
                     if (current_dialog != null)
                     {

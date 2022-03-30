@@ -329,7 +329,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &4466832
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5095,11 +5095,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialog_chat:
-  - {fileID: 11400000, guid: 232deda4103256048b6e3fd26a29bfb2, type: 2}
-  - {fileID: 11400000, guid: 67dd6924b6c99b242a63b50e73561a3b, type: 2}
-  - {fileID: 11400000, guid: b30e311ab1684444592d0a54e8aaa2fd, type: 2}
+  - {fileID: 11400000, guid: 8b34f48c68cbb1b43a229c57e12de3f4, type: 2}
   dialog_box:
-  - {fileID: 11400000, guid: 4f32522f4f010314fa759dee35037d20, type: 2}
+  - {fileID: 11400000, guid: d6daf6afbb4f0464ab408bc3566c9ec2, type: 2}
   do_after_box:
   - m_PersistentCalls:
       m_Calls:

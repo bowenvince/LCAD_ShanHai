@@ -76,7 +76,8 @@ public class BestiarySystem : Singleton<BestiarySystem>
     }
 
     //play animation and change to new page
-    public void FilpPage(int direction) 
+    // return = how many pages filped 
+    public int FilpPage(int direction) 
     {
         int newPageIndex = 0;
         if (direction > 0) 
@@ -94,6 +95,9 @@ public class BestiarySystem : Singleton<BestiarySystem>
         //bestiaries[current_page].BestiaryPage_obj.GetComponent<CanvasGroup>().DOFade(0f, 0.5f).OnComplete(()=> bestiaries[current_page].BestiaryPage_obj.SetActive(false));
         //bestiaries[newPageIndex].BestiaryPage_obj.GetComponent<CanvasGroup>().DOFade(1f, 0.5f);
 
+        int page_filpped = Mathf.Abs(newPageIndex - current_page);
         current_page = newPageIndex;
+
+        return page_filpped;
     }
 }

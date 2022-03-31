@@ -8,6 +8,9 @@ public class SwipeDetection : MonoBehaviour
     private float minimumDistance = 0.2f;
     [SerializeField]
     private float maxTime = 1f;
+    [SerializeField]
+    private Animator filp_animatior;
+
 
     private bool is_active = false;
     private Vector3 startPos;
@@ -51,15 +54,31 @@ public class SwipeDetection : MonoBehaviour
             if (endPos.x < startPos.x)
             {
                 //Debug.Log("Swipe Left");
-                BestiarySystem._this.FilpPage(1);
+                int pages = BestiarySystem._this.FilpPage(1);
+                if (filp_animatior) 
+                {
+                    if(pages > 1)
+                        filp_animatior.SetTrigger("FilpPageRightMulti");
+                    else
+                        filp_animatior.SetTrigger("FilpPageLeft");
+                }
             }
             else 
             {
                 //Debug.Log("Swipe Right");
-                BestiarySystem._this.FilpPage(-1);
+                int pages = BestiarySystem._this.FilpPage(-1);
+                if (filp_animatior)
+                {
+                    if (pages > 1)
+                        filp_animatior.SetTrigger("FilpPageLeftMulti");
+                    else
+                        filp_animatior.SetTrigger("FilpPageRight");
+                }
             }
             
-            
+
+
+
         }
     }
 }

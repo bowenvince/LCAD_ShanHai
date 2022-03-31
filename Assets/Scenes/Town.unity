@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -5076,8 +5076,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1728369547}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 20.071, y: -2.41, z: 0}
-  m_LocalScale: {x: 0.44200748, y: 0.44200748, z: 0.44200748}
+  m_LocalPosition: {x: 20.01, y: -2.216, z: 0}
+  m_LocalScale: {x: 0.2229347, y: 0.2229347, z: 0.2229347}
   m_Children: []
   m_Father: {fileID: 1200055645}
   m_RootOrder: 6
@@ -5125,18 +5125,18 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.1, y: -0.94}
+  m_Offset: {x: 0.04, y: -0.05}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.75, y: 3.55}
+    oldSize: {x: 5.63, y: 9.16}
     newSize: {x: 1.75, y: 3.55}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 4.04, y: 6.35}
+  m_Size: {x: 4.55, y: 8.77}
   m_EdgeRadius: 0
 --- !u!212 &1728369551
 SpriteRenderer:
@@ -5177,7 +5177,7 @@ SpriteRenderer:
   m_SortingLayerID: 1858649657
   m_SortingLayer: 2
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: 6d21710558752b74c97f1bcef797898d, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 28202107c5467c840be2f09c35ddc8c8, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -6595,7 +6595,7 @@ PrefabInstance:
     - target: {fileID: 7168612545474789646, guid: d32ca8992e2af7649977cbe3ba84fc3b,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 9.734234
+      value: 9.728081
       objectReference: {fileID: 0}
     - target: {fileID: 7168612545474789647, guid: d32ca8992e2af7649977cbe3ba84fc3b,
         type: 3}
@@ -6610,7 +6610,7 @@ PrefabInstance:
     - target: {fileID: 7168612545922552242, guid: d32ca8992e2af7649977cbe3ba84fc3b,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 20.705767
+      value: 20.71192
       objectReference: {fileID: 0}
     - target: {fileID: 7168612545922552242, guid: d32ca8992e2af7649977cbe3ba84fc3b,
         type: 3}

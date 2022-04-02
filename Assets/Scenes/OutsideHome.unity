@@ -1592,6 +1592,7 @@ MonoBehaviour:
   dialog_chat: []
   dialog_box:
   - {fileID: 11400000, guid: 7da073687bba0d84eacb2bf0c525d4cc, type: 2}
+  do_after_box: []
 --- !u!1 &1000002037
 GameObject:
   m_ObjectHideFlags: 0
@@ -1979,6 +1980,7 @@ MonoBehaviour:
   dialog_chat:
   - {fileID: 11400000, guid: 50825975ffef4a14fa40b333ae7b7faf, type: 2}
   dialog_box: []
+  do_after_box: []
 --- !u!61 &1151092880
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2416,6 +2418,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: b30e311ab1684444592d0a54e8aaa2fd, type: 2}
   dialog_box:
   - {fileID: 11400000, guid: 4f32522f4f010314fa759dee35037d20, type: 2}
+  do_after_box: []
 --- !u!1 &1509700167
 GameObject:
   m_ObjectHideFlags: 0
@@ -2985,7 +2988,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -3.3549376, y: 0}
+  m_Offset: {x: -0.60432816, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -2996,7 +2999,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 54.7276, y: 7.6200004}
+  m_Size: {x: 49.22638, y: 7.6200004}
   m_EdgeRadius: 0
 --- !u!212 &1639625817
 SpriteRenderer:
@@ -4472,7 +4475,7 @@ PrefabInstance:
     - target: {fileID: 3945643076954839537, guid: 8880534e94659244ca90545c1fa17c62,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 40.8
+      value: 43.61
       objectReference: {fileID: 0}
     - target: {fileID: 3945643076954839537, guid: 8880534e94659244ca90545c1fa17c62,
         type: 3}

@@ -190,9 +190,13 @@ public class InteractionScript : MonoBehaviour
                 {
                     DialogBoxSO current_dialog = current_dialogSys.Get_Current_Dialog_Box();
                     int current_dialog_index = current_dialogSys.Get_Current_Dialog_Box_Index();
-                    if (current_dialog_index >= 0 && current_dialog_index < current_dialogSys.do_after_box.Count) 
+                    if (current_dialog_index >= 0 && current_dialog_index < current_dialogSys.do_after_box.Count)
                     {
                         current_do_after_box = current_dialogSys.do_after_box[current_dialog_index];
+                    }
+                    else 
+                    {
+                        current_do_after_box = null;
                     }
 
                     //Debug.Log("current_dialog = " + current_dialog);

@@ -6,7 +6,7 @@ using TMPro;
 public class PasscodeSlot : MonoBehaviour
 {
     public List<string> option_codes;
-    public TextMeshProUGUI display_text;
+    public Animator animator;
 
     private int current_code = 0;
     public string current_text { get { return option_codes[current_code]; } }
@@ -18,6 +18,12 @@ public class PasscodeSlot : MonoBehaviour
             current_code = 0;
         }
 
-        display_text.text = current_text;
+        animator.SetTrigger("Next");
+    }
+
+    private void OnEnable()
+    {
+        current_code = 0;
+        animator.SetTrigger("Reset");
     }
 }

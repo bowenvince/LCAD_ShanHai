@@ -25,6 +25,7 @@ public class PasscodePanel : MonoBehaviour
         }
         if (Key == temp_input) 
         {
+            //need a delay for animation finish
             on_match.Invoke();
             Debug.Log("Key Matched.");
         }

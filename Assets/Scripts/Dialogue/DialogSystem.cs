@@ -10,6 +10,8 @@ public class DialogSystem : MonoBehaviour
     public List<DialogBoxSO> dialog_box;
     public List<UnityEvent> do_after_box;
 
+    public bool call_on_enter = false;
+
 
     // check if any dialog match current condition, return a random one from all valid
     public DialogChatSO Get_Current_Dialog_Chat() 

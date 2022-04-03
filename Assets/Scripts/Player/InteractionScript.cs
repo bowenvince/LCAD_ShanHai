@@ -56,11 +56,21 @@ public class InteractionScript : MonoBehaviour
                 //show dialog chat
                 StartCoroutine(WaitAndShowDialogChat(Auto_Dialog_Delay));
 
-                //touch screen adaption - show & bind button with interaction
-                Interact_Button.onClick.RemoveAllListeners();
-                Interact_Button.onClick.AddListener(() => ShowDialogBox());
-                Interact_Button_obj.SetActive(true);
-                Interact_Button_obj.GetComponent<Image>().sprite = Interact_Button_Sprite_Talk;
+                //show interaction button if dialog box available
+                if (current_dialogSys.Get_Current_Dialog_Box()) 
+                {
+                    //touch screen adaption - show & bind button with interaction
+                    Interact_Button.onClick.RemoveAllListeners();
+                    Interact_Button.onClick.AddListener(() => ShowDialogBox());
+                    Interact_Button_obj.SetActive(true);
+                    Interact_Button_obj.GetComponent<Image>().sprite = Interact_Button_Sprite_Talk;
+                }
+
+                
+
+                //show dialogbox on enter
+                if (current_dialogSys.call_on_enter)
+                    ShowDialogBox();
             }
             
         }
@@ -79,6 +89,7 @@ public class InteractionScript : MonoBehaviour
                 Interact_Button.onClick.AddListener(() => get_trigger.OnCall());
                 Interact_Button_obj.SetActive(true);
                 Interact_Button_obj.GetComponent<Image>().sprite = Interact_Button_Sprite_Pick;
+
             }
 
             
@@ -149,12 +160,6 @@ public class InteractionScript : MonoBehaviour
             //show dialog canvas + fade-in
             if (current_target)
             {
-                DialogChat_canvas.SetActive(true);
-                DialogChat_canvas.transform.position = current_target.transform.position + new Vector3(0, 1f, 0);
-                DialogChat_canvas.GetComponent<CanvasGroup>().alpha = 0;
-                DialogChat_canvas.GetComponent<CanvasGroup>().DOFade(0.8f, 0.5f);
-                //interact guide fade-out
-                Interact_Guide_canvas.GetComponent<CanvasGroup>().DOFade(0, 1f);
                 //update text if possible
                 if (current_dialogSys)
                 {
@@ -168,12 +173,22 @@ public class InteractionScript : MonoBehaviour
                     else
                     {
                         DialogChat_canvas.GetComponentInChildren<TextMeshProUGUI>().text = "Holder";
+                        return;
                     }
                 }
                 else
                 {
                     DialogChat_canvas.GetComponentInChildren<TextMeshProUGUI>().text = "Holder";
+                    return;
                 }
+
+                DialogChat_canvas.SetActive(true);
+                DialogChat_canvas.transform.position = current_target.transform.position + new Vector3(0, 1f, 0);
+                DialogChat_canvas.GetComponent<CanvasGroup>().alpha = 0;
+                DialogChat_canvas.GetComponent<CanvasGroup>().DOFade(0.8f, 0.5f);
+                //interact guide fade-out
+                Interact_Guide_canvas.GetComponent<CanvasGroup>().DOFade(0, 1f);
+                
             }
         }
     }
@@ -293,7 +308,8 @@ public class InteractionScript : MonoBehaviour
         //re-enable playermovement
         GetComponent<PlayerMovement>().enabled = true;
         //do after box
-        current_do_after_box.Invoke();
+        if(current_do_after_box != null)
+            current_do_after_box.Invoke();
     }
 
     public void HideDialogChat() 

@@ -619,6 +619,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 967ece05e7366e3448c95e511eeee039, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &246783255 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 53657332, guid: 2b9cadfca73707b42971c10cdab27448,
+    type: 3}
+  m_PrefabInstance: {fileID: 246783251}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 246783252}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9209eaee4e78d2c4b8d1a6088e64da05, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &252592517
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -817,6 +829,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_SizeDelta.y
       value: 68.34
+      objectReference: {fileID: 0}
+    - target: {fileID: 8749342285041805277, guid: 746bab60a6d302342a27e2d708794bb7,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 246783255}
+    - target: {fileID: 8749342285041805277, guid: 746bab60a6d302342a27e2d708794bb7,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: UpdateDialogBox
       objectReference: {fileID: 0}
     - target: {fileID: 8749342285941162035, guid: 746bab60a6d302342a27e2d708794bb7,
         type: 3}

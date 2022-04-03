@@ -1,0 +1,16 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: da5f1248abd518a4bb715537a3fece14, type: 3}
+  m_Name: Zheng-Q1-3-N-2
+  m_EditorClassIdentifier: 
+  m_narrationLine: {fileID: 11400000, guid: e3e73e5e5d5cc714d84a080193b39459, type: 2}
+  m_dialogNode_next: {fileID: 11400000, guid: baaec1a040ae60d4daa9ee061ca4ab2b, type: 2}

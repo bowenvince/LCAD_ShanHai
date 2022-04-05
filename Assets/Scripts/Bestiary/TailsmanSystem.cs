@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TailsmanSystem : MonoBehaviour
+public class TailsmanSystem : Singleton<TailsmanSystem>
 {
     #region Helper Class
     [System.Serializable]

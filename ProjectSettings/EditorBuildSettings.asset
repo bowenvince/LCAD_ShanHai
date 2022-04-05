@@ -30,9 +30,15 @@ EditorBuildSettings:
     path: Assets/Scenes/Town.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
-    path: Assets/Scenes/Forest_Zheng.unity
-    guid: 0c9e9398180bd4c41ad4a093c04485f9
-  - enabled: 1
     path: Assets/Scenes/Forest_after.unity
     guid: 9b3d4a45649acd7408f58c420517fa99
+  - enabled: 1
+    path: Assets/Scenes/Mountain.unity
+    guid: 4412d709f7b1d3d4cb00150117b6744c
+  - enabled: 1
+    path: Assets/Scenes/Mountain_Zheng.unity
+    guid: 0c9e9398180bd4c41ad4a093c04485f9
+  - enabled: 1
+    path: Assets/Scenes/Mountain_after.unity
+    guid: fd55fe0b751e65741ac25622bfc62c10
   m_configObjects: {}

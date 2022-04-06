@@ -14,9 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   condition_list:
   - pathSO: {fileID: 11400000, guid: 958a3789a94e5194eb51579ff736e34c, type: 2}
-    progress_state: 0
-  m_first_node: {fileID: 11400000, guid: 59894d5764e8700408b615db52055304, type: 2}
-  solution_list:
-  - pathSO: {fileID: 11400000, guid: 958a3789a94e5194eb51579ff736e34c, type: 2}
-    from_state: 0
-    to_state: 1
+    progress_state: 1
+  m_first_node: {fileID: 11400000, guid: 49c75f9033a46064ebbe96f80aa6f5d2, type: 2}
+  solution_list: []

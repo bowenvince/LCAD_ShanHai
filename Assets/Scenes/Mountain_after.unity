@@ -948,13 +948,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a291691febef00f4fb8b198dab8422f8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bestiary_set_index: 0
-  bestiary_element_index: 3
+  bestiary_lines:
+  - bestiary_set_index: 1
+    bestiary_element_index: 1
+    bestiary_state: 0
+  - bestiary_set_index: 1
+    bestiary_element_index: 2
+    bestiary_state: 0
+  - bestiary_set_index: 1
+    bestiary_element_index: 3
+    bestiary_state: 1
+  - bestiary_set_index: 1
+    bestiary_element_index: 4
+    bestiary_state: 1
+  - bestiary_set_index: 1
+    bestiary_element_index: 5
+    bestiary_state: 1
   events:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 505272579}
-        m_MethodName: AddBestiaryLine
+        m_MethodName: AddBestiaryLines
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2721,7 +2735,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2106473087}
   m_Layer: 0
-  m_Name: Position
+  m_Name: Position_Cave
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2735,7 +2749,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2106473086}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.43, y: 0, z: 0}
+  m_LocalPosition: {x: 0.8, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1262648165}

@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Character_ZhuTheElder
   m_EditorClassIdentifier: 
   m_name: Zhu the Elder
-  m_sprite: {fileID: 21300000, guid: 6ba15dc6e91162145b7ef1dbdb298e83, type: 3}
+  m_sprite: {fileID: 21300000, guid: 8563fb65c1fd90c408a8023e0f93b83b, type: 3}
   m_is_player: 0

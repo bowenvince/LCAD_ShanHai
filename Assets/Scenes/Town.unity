@@ -600,6 +600,7 @@ GameObject:
   - component: {fileID: 208142018}
   - component: {fileID: 208142017}
   - component: {fileID: 208142019}
+  - component: {fileID: 208142020}
   m_Layer: 5
   m_Name: Image
   m_TagString: Untagged
@@ -688,7 +689,39 @@ MonoBehaviour:
   - {fileID: 929306865}
   on_match:
     m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 208142020}
+        m_MethodName: AddBestiaryLines
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &208142020
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 208142015}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a291691febef00f4fb8b198dab8422f8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bestiary_lines:
+  - bestiary_set_index: 2
+    bestiary_element_index: 0
+    bestiary_state: 1
+  events:
+    m_PersistentCalls:
       m_Calls: []
+  item_image: {fileID: 0}
+  item_name: 
 --- !u!1 &209026388
 GameObject:
   m_ObjectHideFlags: 0
@@ -784,8 +817,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a291691febef00f4fb8b198dab8422f8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bestiary_set_index: 0
-  bestiary_element_index: 0
+  bestiary_lines: []
   events:
     m_PersistentCalls:
       m_Calls: []
@@ -970,6 +1002,7 @@ GameObject:
   - component: {fileID: 251966841}
   - component: {fileID: 251966840}
   - component: {fileID: 251966842}
+  - component: {fileID: 251966843}
   m_Layer: 0
   m_Name: Zhu the Elder
   m_TagString: NPC
@@ -1082,8 +1115,56 @@ MonoBehaviour:
   dialog_chat: []
   dialog_box:
   - {fileID: 11400000, guid: c2b42dbdb1dd12b4b9ebef489be21d36, type: 2}
-  do_after_box: []
+  do_after_box:
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1701333894}
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 251966843}
+        m_MethodName: AddBestiaryLines
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
   call_on_enter: 0
+--- !u!114 &251966843
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 251966838}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a291691febef00f4fb8b198dab8422f8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bestiary_lines:
+  - bestiary_set_index: 1
+    bestiary_element_index: 0
+    bestiary_state: 1
+  - bestiary_set_index: 1
+    bestiary_element_index: 2
+    bestiary_state: 1
+  events:
+    m_PersistentCalls:
+      m_Calls: []
+  item_image: {fileID: 0}
+  item_name: 
 --- !u!1 &285376877
 GameObject:
   m_ObjectHideFlags: 0
@@ -1982,6 +2063,7 @@ GameObject:
   - component: {fileID: 516466285}
   - component: {fileID: 516466284}
   - component: {fileID: 516466286}
+  - component: {fileID: 516466287}
   m_Layer: 0
   m_Name: Qiqi
   m_TagString: NPC
@@ -2094,8 +2176,42 @@ MonoBehaviour:
   dialog_chat: []
   dialog_box:
   - {fileID: 11400000, guid: ba05782e099a83c48b404cdb05f711b4, type: 2}
-  do_after_box: []
+  do_after_box:
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 516466287}
+        m_MethodName: AddBestiaryLines
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   call_on_enter: 0
+--- !u!114 &516466287
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 516466282}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a291691febef00f4fb8b198dab8422f8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bestiary_lines:
+  - bestiary_set_index: 1
+    bestiary_element_index: 1
+    bestiary_state: 1
+  events:
+    m_PersistentCalls:
+      m_Calls: []
+  item_image: {fileID: 0}
+  item_name: 
 --- !u!1 &544287190
 GameObject:
   m_ObjectHideFlags: 0
@@ -3081,12 +3197,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 459b2bc4f25c05a43b8b01d1db626828, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SceneSetList:
-  - quest_path: {fileID: 11400000, guid: fcaa97d75632a9847bcc79621d30af5e, type: 2}
-    valid_state: 2
-    sceneToLoad: Forest_Zheng
-    destination: 0
-    HUD_display: 0
+  SceneSetList: []
   default_sceneToLoad: Mountain
   default_destination: 0
   default_HUB_display: 1
@@ -4121,6 +4232,7 @@ MonoBehaviour:
   dialog_box:
   - {fileID: 11400000, guid: 4f32522f4f010314fa759dee35037d20, type: 2}
   - {fileID: 11400000, guid: 047f712110801fb48ba0b9a439b309a5, type: 2}
+  - {fileID: 11400000, guid: 4da2fb4cd9006a94c8461df94d8c8772, type: 2}
   do_after_box:
   - m_PersistentCalls:
       m_Calls:
@@ -4148,6 +4260,19 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+      - m_Target: {fileID: 1701333894}
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  - m_PersistentCalls:
+      m_Calls: []
   call_on_enter: 0
 --- !u!95 &1463013072
 Animator:
@@ -5742,7 +5867,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2112480796
 Transform:
   m_ObjectHideFlags: 0
@@ -5769,8 +5894,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a291691febef00f4fb8b198dab8422f8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bestiary_set_index: 0
-  bestiary_element_index: 0
+  bestiary_lines: []
   events:
     m_PersistentCalls:
       m_Calls:
@@ -7561,13 +7685,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 459b2bc4f25c05a43b8b01d1db626828, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SceneSetList:
-  - quest_path: {fileID: 11400000, guid: fcaa97d75632a9847bcc79621d30af5e, type: 2}
-    valid_state: 2
-    sceneToLoad: Forest_Zheng
-    destination: 0
-    HUD_display: 0
-  default_sceneToLoad: Forest
+  SceneSetList: []
+  default_sceneToLoad: Forest_after
   default_destination: 2
   default_HUB_display: 1
   facing_right: 0

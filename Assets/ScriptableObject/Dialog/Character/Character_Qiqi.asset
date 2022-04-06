@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Character_Qiqi
   m_EditorClassIdentifier: 
   m_name: Qiqi
-  m_sprite: {fileID: 21300000, guid: 62a29da30d235314bb96c8a0bbd1f823, type: 3}
+  m_sprite: {fileID: 21300000, guid: eabb26ac0cfc2ca4a9fda37223c0b9cc, type: 3}
   m_is_player: 0

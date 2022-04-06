@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 379bb87d1abf21547a343c71baac71f5, type: 3}
   m_Name: Character_Bookstore
   m_EditorClassIdentifier: 
-  m_name: Bookstore Keeper
-  m_sprite: {fileID: 21300000, guid: 62a29da30d235314bb96c8a0bbd1f823, type: 3}
+  m_name: Lee
+  m_sprite: {fileID: 21300000, guid: 6ca7d6ad01347234f88b1a9a6a48d989, type: 3}
   m_is_player: 0

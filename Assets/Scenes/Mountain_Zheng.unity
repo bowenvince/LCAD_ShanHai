@@ -421,6 +421,16 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2068094457921137975, guid: 238d3992b0d23b9448ff69ee4e64e3e3,
+        type: 3}
+      propertyPath: result_questPath_from
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2068094457921137975, guid: 238d3992b0d23b9448ff69ee4e64e3e3,
+        type: 3}
+      propertyPath: result_questPath_to
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 2068094458084693253, guid: 238d3992b0d23b9448ff69ee4e64e3e3,
         type: 3}
       propertyPath: m_AnchorMax.y
@@ -3103,11 +3113,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1838073866, guid: 8880534e94659244ca90545c1fa17c62, type: 3}
       propertyPath: SceneSetList.Array.size
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1838073866, guid: 8880534e94659244ca90545c1fa17c62, type: 3}
       propertyPath: default_sceneToLoad
-      value: Mountain_after
+      value: Mountain
       objectReference: {fileID: 0}
     - target: {fileID: 1838073866, guid: 8880534e94659244ca90545c1fa17c62, type: 3}
       propertyPath: facing_right
@@ -3123,6 +3133,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1838073866, guid: 8880534e94659244ca90545c1fa17c62, type: 3}
       propertyPath: default_HUB_display
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1838073866, guid: 8880534e94659244ca90545c1fa17c62, type: 3}
+      propertyPath: SceneSetList.Array.data[0].quest_path
+      value: 
+      objectReference: {fileID: 11400000, guid: fcaa97d75632a9847bcc79621d30af5e,
+        type: 2}
+    - target: {fileID: 1838073866, guid: 8880534e94659244ca90545c1fa17c62, type: 3}
+      propertyPath: SceneSetList.Array.data[0].valid_state
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1838073866, guid: 8880534e94659244ca90545c1fa17c62, type: 3}
+      propertyPath: SceneSetList.Array.data[0].sceneToLoad
+      value: Mountain_after
+      objectReference: {fileID: 0}
+    - target: {fileID: 1838073866, guid: 8880534e94659244ca90545c1fa17c62, type: 3}
+      propertyPath: SceneSetList.Array.data[0].destination
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1838073866, guid: 8880534e94659244ca90545c1fa17c62, type: 3}
+      propertyPath: SceneSetList.Array.data[0].HUD_display
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3789808570852949638, guid: 8880534e94659244ca90545c1fa17c62,

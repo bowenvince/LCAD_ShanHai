@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Bookstore-Q1-1-L-1
   m_EditorClassIdentifier: 
   m_character: {fileID: 11400000, guid: 639c285838d0a8543bea5ff3797b15d0, type: 2}
-  m_text: Win a game for a secret.
+  m_text: Hi mister, do you care for a game?

@@ -72,7 +72,7 @@ public class BestiarySystem : Singleton<BestiarySystem>
     //Reset current page to index 0
     public void ResetPages() 
     {
-        FilpPage(0);
+        FilpPageTo(0);
     }
 
     //play animation and change to new page
@@ -99,5 +99,17 @@ public class BestiarySystem : Singleton<BestiarySystem>
         current_page = newPageIndex;
 
         return page_filpped;
+    }
+
+    //filp to target page
+    public void FilpPageTo(int pageNumber) 
+    {
+        if (pageNumber > bestiaries.Count || pageNumber < 0) return;
+        if (current_page != pageNumber) 
+        {
+            bestiaries[current_page].BestiaryPage_obj.SetActive(false);
+            bestiaries[pageNumber].BestiaryPage_obj.SetActive(true);
+            current_page = pageNumber;
+        }
     }
 }

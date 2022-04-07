@@ -43,20 +43,26 @@ public class SceneTransitionHandler : MonoBehaviour
 
         yield return new WaitForSeconds(0f);
 
-        player = SceneManagerLocal._this.player;
-
-        SceneManagerLocal._this.player.transform.position = SceneManagerLocal._this.position[positionIndex].transform.position;
-
-        Vector3 scale = SceneManagerLocal._this.player.transform.localScale;
-        if (isFacingRight)
-        {
-            scale = new Vector3(Mathf.Abs(scale.x), scale.y, scale.z);
-        }
-        else
-        {
-            scale = new Vector3(-1 * Mathf.Abs(scale.x), scale.y, scale.z);
-        }
-
         cutSceneAnim.SetTrigger("CutSceneDone");
+
+        if (positionIndex >= 0) 
+        {
+            player = SceneManagerLocal._this.player;
+
+            SceneManagerLocal._this.player.transform.position = SceneManagerLocal._this.position[positionIndex].transform.position;
+
+            Vector3 scale = SceneManagerLocal._this.player.transform.localScale;
+            if (isFacingRight)
+            {
+                scale = new Vector3(Mathf.Abs(scale.x), scale.y, scale.z);
+            }
+            else
+            {
+                scale = new Vector3(-1 * Mathf.Abs(scale.x), scale.y, scale.z);
+            }
+        }
+        
+
+        
     }
 }

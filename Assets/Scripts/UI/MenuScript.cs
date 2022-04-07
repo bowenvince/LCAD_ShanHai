@@ -10,4 +10,9 @@ public class MenuScript : MonoBehaviour
     {
         SceneTransitionHandler._this.SceneTransition(scene_name, 0, true);
     }
+
+    public void Menu_Transit() 
+    {
+        SceneTransitionHandler._this.SceneTransition(scene_name, -1, true);
+    }
 }

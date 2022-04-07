@@ -1525,7 +1525,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialog_chat:
-  - {fileID: 11400000, guid: 50825975ffef4a14fa40b333ae7b7faf, type: 2}
+  - {fileID: 0}
   dialog_box: []
   do_after_box: []
   call_on_enter: 0
@@ -2108,9 +2108,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialog_chat:
-  - {fileID: 11400000, guid: 232deda4103256048b6e3fd26a29bfb2, type: 2}
-  - {fileID: 11400000, guid: 67dd6924b6c99b242a63b50e73561a3b, type: 2}
-  - {fileID: 11400000, guid: b30e311ab1684444592d0a54e8aaa2fd, type: 2}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   dialog_box:
   - {fileID: 11400000, guid: 4f32522f4f010314fa759dee35037d20, type: 2}
   do_after_box: []
@@ -3991,6 +3991,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5420793806169604598, guid: efec35be384414b4a8e17f8ad49c5a3f,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5420793806309303492, guid: efec35be384414b4a8e17f8ad49c5a3f,
         type: 3}
       propertyPath: m_Name
@@ -4222,7 +4227,7 @@ PrefabInstance:
     - target: {fileID: 7168612545474789646, guid: d32ca8992e2af7649977cbe3ba84fc3b,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.0000019073486
+      value: 0.000002861023
       objectReference: {fileID: 0}
     - target: {fileID: 7168612545474789647, guid: d32ca8992e2af7649977cbe3ba84fc3b,
         type: 3}
@@ -4237,7 +4242,7 @@ PrefabInstance:
     - target: {fileID: 7168612545922552242, guid: d32ca8992e2af7649977cbe3ba84fc3b,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 10.239998
+      value: 10.239997
       objectReference: {fileID: 0}
     - target: {fileID: 7168612545922552242, guid: d32ca8992e2af7649977cbe3ba84fc3b,
         type: 3}

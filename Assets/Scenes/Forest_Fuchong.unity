@@ -449,6 +449,11 @@ PrefabInstance:
       propertyPath: left_amount
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 2068094457921137975, guid: 238d3992b0d23b9448ff69ee4e64e3e3,
+        type: 3}
+      propertyPath: succeed_amount
+      value: 0.08
+      objectReference: {fileID: 0}
     - target: {fileID: 2068094458084693253, guid: 238d3992b0d23b9448ff69ee4e64e3e3,
         type: 3}
       propertyPath: m_AnchorMax.y

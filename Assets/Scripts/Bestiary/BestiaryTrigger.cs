@@ -23,8 +23,13 @@ public class BestiaryTrigger : MonoBehaviour, ITrigger
 
     public void AddBestiaryLines() 
     {
+        if (bestiary_lines.Count <= 0) { return; }
+
         foreach(BestiaryLine line in bestiary_lines)
             BestiarySystem._this.UpdateBestiary(line.bestiary_set_index, line.bestiary_element_index, line.bestiary_state);
+
+        //raise Bestiary to the first updated page
+        BestiarySystem._this.RaisePanel(bestiary_lines[0].bestiary_set_index);
     }
 
     public void ShowNotification() 

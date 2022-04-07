@@ -35,6 +35,9 @@ public class BestiarySystem : Singleton<BestiarySystem>
     [SerializeField]
     private int current_page = 0;
 
+    [SerializeField]
+    private BestiaryButtonScript button;
+
     //update state in record, change obj accordingly
     public void UpdateBestiary(int set_index, int index, int state) 
     {
@@ -111,5 +114,14 @@ public class BestiarySystem : Singleton<BestiarySystem>
             bestiaries[pageNumber].BestiaryPage_obj.SetActive(true);
             current_page = pageNumber;
         }
+    }
+
+    //raise panel and filp page to
+    public void RaisePanel(int pageNumber = 0) 
+    {
+        if (button == null) { return; }
+
+        button.OpenCloseBestiary();
+        FilpPageTo(pageNumber);
     }
 }

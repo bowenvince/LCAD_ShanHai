@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -713,6 +713,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 208142021}
+        m_MethodName: UpdateQuest
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &208142020
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -844,15 +855,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 209026388}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a291691febef00f4fb8b198dab8422f8, type: 3}
+  m_Script: {fileID: 11500000, guid: 7e631ba01e2e4bf4fb9cb6e5de7a354e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bestiary_lines: []
-  events:
-    m_PersistentCalls:
-      m_Calls: []
-  item_image: {fileID: 0}
-  item_name: 
+  dialog_chat:
+  - {fileID: 11400000, guid: 74de063af7418994e89180d339d21391, type: 2}
+  - {fileID: 11400000, guid: 53672c4d0a95e0c41a24c2ac4d10349c, type: 2}
+  - {fileID: 11400000, guid: 51cfa082ccf96ba428c851b3935344a4, type: 2}
+  dialog_box: []
+  do_after_box: []
+  call_on_enter: 0
 --- !u!61 &209026392
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1142,7 +1154,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7e631ba01e2e4bf4fb9cb6e5de7a354e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialog_chat: []
+  dialog_chat:
+  - {fileID: 11400000, guid: 2020755fcd1f9a846821eb7e36f5fdd0, type: 2}
+  - {fileID: 11400000, guid: d2fba562fa02a29459d1c048a0614c18, type: 2}
+  - {fileID: 11400000, guid: 6b1cfaaed2dac664484d022e86bd4fa3, type: 2}
+  - {fileID: 11400000, guid: b0dcfae02a10fc54f8ea638dfabc7d59, type: 2}
   dialog_box:
   - {fileID: 11400000, guid: c2b42dbdb1dd12b4b9ebef489be21d36, type: 2}
   do_after_box:
@@ -2438,7 +2454,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7e631ba01e2e4bf4fb9cb6e5de7a354e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialog_chat: []
+  dialog_chat:
+  - {fileID: 11400000, guid: 21823cb34262a2b4f978aef25d52f8c6, type: 2}
+  - {fileID: 11400000, guid: b9fc009adbce600438bace8c8723ff87, type: 2}
+  - {fileID: 11400000, guid: bc9bf9f424f1a004589b317c84740882, type: 2}
   dialog_box:
   - {fileID: 11400000, guid: ba05782e099a83c48b404cdb05f711b4, type: 2}
   do_after_box:
@@ -3269,7 +3288,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7e631ba01e2e4bf4fb9cb6e5de7a354e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialog_chat: []
+  dialog_chat:
+  - {fileID: 11400000, guid: 90af6dc9524e2c841b8359f59c334e5d, type: 2}
+  - {fileID: 11400000, guid: 58a5f47b8bc899f4984d972aa6201e75, type: 2}
+  - {fileID: 11400000, guid: 1736bebf44daeca47a905e1381cfa24c, type: 2}
   dialog_box:
   - {fileID: 11400000, guid: 7da073687bba0d84eacb2bf0c525d4cc, type: 2}
   do_after_box: []
@@ -4522,9 +4544,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialog_chat:
-  - {fileID: 11400000, guid: 232deda4103256048b6e3fd26a29bfb2, type: 2}
-  - {fileID: 11400000, guid: 67dd6924b6c99b242a63b50e73561a3b, type: 2}
-  - {fileID: 11400000, guid: b30e311ab1684444592d0a54e8aaa2fd, type: 2}
+  - {fileID: 11400000, guid: 4eea20340fc99e44c96a2ec616323667, type: 2}
+  - {fileID: 11400000, guid: 05ee3ec835b0d3348958d48ccb318f92, type: 2}
+  - {fileID: 11400000, guid: 5526375698c115f42b7fa03a7e98fa1b, type: 2}
   dialog_box:
   - {fileID: 11400000, guid: 4f32522f4f010314fa759dee35037d20, type: 2}
   - {fileID: 11400000, guid: 047f712110801fb48ba0b9a439b309a5, type: 2}
@@ -5750,7 +5772,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialog_chat:
-  - {fileID: 11400000, guid: 8b34f48c68cbb1b43a229c57e12de3f4, type: 2}
+  - {fileID: 11400000, guid: b24f777ed8c02a54a80ecef7f6e1ff1e, type: 2}
+  - {fileID: 11400000, guid: a222f7a6c275a474188a3d982627295f, type: 2}
+  - {fileID: 11400000, guid: 3e26e0c5a6a8a2e4a82a2c87b7d1c075, type: 2}
   dialog_box:
   - {fileID: 11400000, guid: d6daf6afbb4f0464ab408bc3566c9ec2, type: 2}
   do_after_box:

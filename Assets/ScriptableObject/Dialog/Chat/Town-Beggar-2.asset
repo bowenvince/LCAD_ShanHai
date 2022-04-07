@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 81aa4e66d2a8d7947bf826d451dc13eb, type: 3}
-  m_Name: Tutorial-Home
+  m_Name: Town-Beggar-2
   m_EditorClassIdentifier: 
   condition_list: []
-  m_text: I should get to work before the sun falls.
+  m_text: "More wine\u2026"
   solution_list: []

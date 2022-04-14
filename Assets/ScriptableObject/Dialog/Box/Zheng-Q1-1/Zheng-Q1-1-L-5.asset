@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Zheng-Q1-1-L-5
   m_EditorClassIdentifier: 
   m_character: {fileID: 11400000, guid: 5dfbf958e5e257649994d604666fe55d, type: 2}
-  m_text: Honey, you don't look like someone can handle that.
+  m_text: 'Honey, you don''t look like someone who can handle that. '

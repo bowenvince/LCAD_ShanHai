@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Zheng-Q1-2-L-4
   m_EditorClassIdentifier: 
   m_character: {fileID: 11400000, guid: 051c25012e4649a459b22ecb12cdf934, type: 2}
-  m_text: "Monster? Pfff\u2026 There are no monsters, those are bedtime stories.
-    He was scared by a tiger. Tiger is the problem alright?"
+  m_text: "Monster? Pfff\u2026 There are no monsters. Those are bedtime stories.
+    He was scared by a tiger. A tiger is the problem, nothing more."

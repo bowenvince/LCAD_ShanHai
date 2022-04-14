@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Zheng-Q1-2-L-5
   m_EditorClassIdentifier: 
   m_character: {fileID: 11400000, guid: cb460bfd4a348744cad31d9b10136684, type: 2}
-  m_text: Where is this big tiger?
+  m_text: Where is this tiger?

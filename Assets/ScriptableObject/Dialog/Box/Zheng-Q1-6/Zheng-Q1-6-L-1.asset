@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Zheng-Q1-6-L-1
   m_EditorClassIdentifier: 
   m_character: {fileID: 11400000, guid: 5dfbf958e5e257649994d604666fe55d, type: 2}
-  m_text: "Look who's back, you really found it. Tough fight I see, I\u2019m impressed. "
+  m_text: "Look who's back, you really found it! Tough fight, I see. I\u2019m impressed."

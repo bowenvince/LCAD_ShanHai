@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Zheng-Q1-3-L-9
   m_EditorClassIdentifier: 
   m_character: {fileID: 11400000, guid: 1c23b34a86c294b4784e6c0c13be25bd, type: 2}
-  m_text: 'Sorry dad! Hey, nice to meet you and good luck~ Please tell me what they
-    look like! '
+  m_text: 'Sorry, dad! Hey, nice to meet you and good luck. Please tell me what they
+    look like if you find it! '

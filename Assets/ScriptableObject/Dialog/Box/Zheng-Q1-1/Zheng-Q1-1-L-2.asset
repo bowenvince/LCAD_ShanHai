@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Zheng-Q1-1-L-2
   m_EditorClassIdentifier: 
   m_character: {fileID: 11400000, guid: 1a84557566dc83f47b43d47397dd705b, type: 2}
-  m_text: "Oh hi, I\u2019m Liu, I heard there are some strange things going on here,
+  m_text: "Oh hi, I\u2019m Liu. I heard there are some strange things going on here,
     and people are getting hurt?"

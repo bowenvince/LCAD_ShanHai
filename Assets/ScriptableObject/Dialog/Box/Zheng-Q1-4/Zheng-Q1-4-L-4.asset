@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Zheng-Q1-4-L-4
   m_EditorClassIdentifier: 
   m_character: {fileID: 11400000, guid: 9eff22b9bf90ff940ac68d1846c3ce1a, type: 2}
-  m_text: "Hmm\u2026 Yes, there is a mountain in the east, the monster lives within...it
-    was evil, but it is not\u2026"
+  m_text: "Hmm\u2026 Yes, there is a mountain to the east, where the monster lives...
+    It was once evil, but it is evil no longer\u2026"

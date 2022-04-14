@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Zheng-Q1-2-L-6
   m_EditorClassIdentifier: 
   m_character: {fileID: 11400000, guid: 051c25012e4649a459b22ecb12cdf934, type: 2}
-  m_text: Why do you care? Don't even think about going after that. Kid.
+  m_text: Why do you care? Don't even think about going after that, kid.

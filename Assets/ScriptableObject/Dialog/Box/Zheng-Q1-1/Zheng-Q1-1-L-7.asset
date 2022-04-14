@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Zheng-Q1-1-L-7
   m_EditorClassIdentifier: 
   m_character: {fileID: 11400000, guid: 5dfbf958e5e257649994d604666fe55d, type: 2}
-  m_text: "...ok, some villagers might know something, go ask the <color=#45818e>butcher</color>,
+  m_text: "...Okay, some villagers might know something. Go ask the <color=#45818e>butcher</color>,
     he\u2019s a friend of the hunters. "

@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Zheng-Q1-3-L-7
   m_EditorClassIdentifier: 
   m_character: {fileID: 11400000, guid: 1c23b34a86c294b4784e6c0c13be25bd, type: 2}
-  m_text: I donno, that's up to you to find out~ You may ask my grandpa, he always
-    sits under the big tree over there.
+  m_text: "I dunno, that\u2019s all I know. You can ask my grandpa, though. He always
+    sits under the big tree over there."

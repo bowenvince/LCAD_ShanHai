@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Zheng-Q1-3-L-5
   m_EditorClassIdentifier: 
   m_character: {fileID: 11400000, guid: 1c23b34a86c294b4784e6c0c13be25bd, type: 2}
-  m_text: "I\u2019m Qiqi, I heard you were asking my dad about monsters, he\u2019ll
-    never believe it. My grandpa said there is a creature in the mountain, and it
-    makes a loud noise! It is so cool\u2026 I heard it was defeated by another creature,
-    I imagine the fight everyday, it must be so cool."
+  m_text: "I\u2019m Qiqi, I heard you were asking my dad about monsters, but he\u2019ll
+    never believe it. My grandpa said there is a creature in the mountains that makes
+    a loud noise! It\u2019s so cool\u2026 I heard it was defeated by another creature!
+    I imagine the fight every day, it\u2019s so cool!"

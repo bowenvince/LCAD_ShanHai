@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Zheng-Q1-1-L-6
   m_EditorClassIdentifier: 
   m_character: {fileID: 11400000, guid: cb460bfd4a348744cad31d9b10136684, type: 2}
-  m_text: "It\u2019s not my first time seeing monsters, I know it's not tigers that
-    are hurting people."
+  m_text: "It\u2019s not my first time seeing monsters. I know it's not just tigers
+    that are hurting people."

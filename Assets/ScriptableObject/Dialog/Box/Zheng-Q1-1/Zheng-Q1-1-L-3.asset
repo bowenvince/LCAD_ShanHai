@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Zheng-Q1-1-L-3
   m_EditorClassIdentifier: 
   m_character: {fileID: 11400000, guid: 5dfbf958e5e257649994d604666fe55d, type: 2}
-  m_text: "Who told you that? Go home kid~ It\u2019s not safe out here. There are
-    monsters gonna eat you hehe~"
+  m_text: "Who told you that? Go home kid~ It\u2019s not safe out there. There are
+    monsters that will eat you hehe~ "

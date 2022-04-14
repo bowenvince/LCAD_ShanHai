@@ -13,4 +13,5 @@ MonoBehaviour:
   m_Name: Zheng-Q1-3-L-8
   m_EditorClassIdentifier: 
   m_character: {fileID: 11400000, guid: 051c25012e4649a459b22ecb12cdf934, type: 2}
-  m_text: Boy! What are you doing? Are you talking about the monster story again?!
+  m_text: "Boy! What are you doing? Are you talking about the \u201Cmonster\u201D 
+    again?!"

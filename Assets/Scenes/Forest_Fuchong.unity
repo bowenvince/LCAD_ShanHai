@@ -447,7 +447,7 @@ PrefabInstance:
     - target: {fileID: 2068094457921137975, guid: 238d3992b0d23b9448ff69ee4e64e3e3,
         type: 3}
       propertyPath: left_amount
-      value: 6
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 2068094457921137975, guid: 238d3992b0d23b9448ff69ee4e64e3e3,
         type: 3}
@@ -457,7 +457,7 @@ PrefabInstance:
     - target: {fileID: 2068094457921137975, guid: 238d3992b0d23b9448ff69ee4e64e3e3,
         type: 3}
       propertyPath: right_amount
-      value: -6
+      value: -5
       objectReference: {fileID: 0}
     - target: {fileID: 2068094458084693253, guid: 238d3992b0d23b9448ff69ee4e64e3e3,
         type: 3}

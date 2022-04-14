@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Town-Sun-3
   m_EditorClassIdentifier: 
   condition_list: []
-  m_text: 'Come on in, get a drink~ '
+  m_text: You are too young to drink honey
   solution_list: []

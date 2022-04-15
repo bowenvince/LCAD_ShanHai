@@ -13,4 +13,5 @@ MonoBehaviour:
   m_Name: Tutorial-Q1-0-L-1
   m_EditorClassIdentifier: 
   m_character: {fileID: 11400000, guid: cb460bfd4a348744cad31d9b10136684, type: 2}
-  m_text: "That was a long sleep\u2026father must be hungry, wait, where is he?"
+  m_text: "That was a long sleep\u2026father must be hungry\u2026 wait, where is
+    he? "

@@ -8,9 +8,9 @@ public class Singleton<T> : MonoBehaviour where T : MonoBehaviour
 
     private void Awake()
     {
-        if (_this != null) 
+        if (_this != null && _this != this) 
         {
-            Destroy(this);
+            Destroy(this.gameObject);
             return;
         }
         _this = this as T;

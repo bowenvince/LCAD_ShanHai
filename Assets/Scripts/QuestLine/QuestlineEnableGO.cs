@@ -9,7 +9,7 @@ public class QuestlineEnableGO : MonoBehaviour
     public class QuestlineEnable
     {
         public QuestPathSO pathSO;
-        public int disable_state;
+        public int enable_state;
     }
     #endregion
 
@@ -21,7 +21,7 @@ public class QuestlineEnableGO : MonoBehaviour
 
         foreach (QuestlineEnable quest in questlineValid) 
         {
-            if (QuestSystem._this.Check_Condition(quest.pathSO, quest.disable_state)) 
+            if (QuestSystem._this.Check_Condition(quest.pathSO, quest.enable_state)) 
             {
                 return;
             }

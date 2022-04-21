@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -3743,7 +3743,7 @@ PrefabInstance:
     - target: {fileID: 1667514264856182902, guid: c30f24d0fcaafcf46a779dc54ee4cb88,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -1006
+      value: -792
       objectReference: {fileID: 0}
     - target: {fileID: 1667514264856182903, guid: c30f24d0fcaafcf46a779dc54ee4cb88,
         type: 3}
@@ -3759,6 +3759,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_margin.w
       value: -49.331654
+      objectReference: {fileID: 0}
+    - target: {fileID: 1667514264856182903, guid: c30f24d0fcaafcf46a779dc54ee4cb88,
+        type: 3}
+      propertyPath: m_text
+      value: Tap To Continue
+      objectReference: {fileID: 0}
+    - target: {fileID: 1667514264998508949, guid: c30f24d0fcaafcf46a779dc54ee4cb88,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 360
+      objectReference: {fileID: 0}
+    - target: {fileID: 1667514264998508950, guid: c30f24d0fcaafcf46a779dc54ee4cb88,
+        type: 3}
+      propertyPath: m_text
+      value: Tap To Continue
       objectReference: {fileID: 0}
     - target: {fileID: 1667514265860237442, guid: c30f24d0fcaafcf46a779dc54ee4cb88,
         type: 3}
@@ -3778,7 +3793,7 @@ PrefabInstance:
     - target: {fileID: 1667514265982653394, guid: c30f24d0fcaafcf46a779dc54ee4cb88,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 505
+      value: 376
       objectReference: {fileID: 0}
     - target: {fileID: 1667514266131974100, guid: c30f24d0fcaafcf46a779dc54ee4cb88,
         type: 3}
@@ -3793,12 +3808,22 @@ PrefabInstance:
     - target: {fileID: 1667514266175636418, guid: c30f24d0fcaafcf46a779dc54ee4cb88,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1667514266175636419, guid: c30f24d0fcaafcf46a779dc54ee4cb88,
         type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 60
+      objectReference: {fileID: 0}
+    - target: {fileID: 1667514266504163813, guid: c30f24d0fcaafcf46a779dc54ee4cb88,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -486
+      objectReference: {fileID: 0}
+    - target: {fileID: 1667514266504163814, guid: c30f24d0fcaafcf46a779dc54ee4cb88,
+        type: 3}
+      propertyPath: m_text
+      value: Tap To Continue
       objectReference: {fileID: 0}
     - target: {fileID: 1667514266529768653, guid: c30f24d0fcaafcf46a779dc54ee4cb88,
         type: 3}
